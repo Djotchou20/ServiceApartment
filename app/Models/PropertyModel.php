@@ -16,6 +16,7 @@ class PropertyModel extends Model
         'description',
         'price',
         'bedrooms',
+        'username',
         'bathrooms',
         'area',
         'status',
