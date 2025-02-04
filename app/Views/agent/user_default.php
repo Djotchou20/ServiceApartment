@@ -30,7 +30,7 @@
     <link href="<?= base_url() ?>assetss/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <script>
-    // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
+        // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
     </script>
 </head>
 <!--end::Head-->
@@ -42,23 +42,23 @@
     data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
     <!--begin::Theme mode setup on page load-->
     <script>
-    var defaultThemeMode = "light";
-    var themeMode;
-    if (document.documentElement) {
-        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
-            themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
-        } else {
-            if (localStorage.getItem("data-bs-theme") !== null) {
-                themeMode = localStorage.getItem("data-bs-theme");
+        var defaultThemeMode = "light";
+        var themeMode;
+        if (document.documentElement) {
+            if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
             } else {
-                themeMode = defaultThemeMode;
+                if (localStorage.getItem("data-bs-theme") !== null) {
+                    themeMode = localStorage.getItem("data-bs-theme");
+                } else {
+                    themeMode = defaultThemeMode;
+                }
             }
+            if (themeMode === "system") {
+                themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.setAttribute("data-bs-theme", themeMode);
         }
-        if (themeMode === "system") {
-            themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
-        document.documentElement.setAttribute("data-bs-theme", themeMode);
-    }
     </script>
     <!--end::Theme mode setup on page load-->
     <!--begin::App-->
@@ -66,9 +66,6 @@
         <!--begin::Page-->
         <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
             <!--begin::Header-->
-
-
-
             <?= view('agent/head') ?>
             <?= $this->renderSection('content') ?>
             <?= view('agent/leftsidebar') ?>
@@ -78,7 +75,7 @@
             <!--end::Modals-->
             <!--begin::Javascript-->
             <script>
-            var hostUrl = "<?= base_url() ?>assetss/";
+                var hostUrl = "<?= base_url() ?>assetss/";
             </script>
             <!--begin::Global Javascript Bundle(mandatory for all pages)-->
             <script src="<?= base_url() ?>assetss/plugins/global/plugins.bundle.js"></script>

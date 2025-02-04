@@ -67,7 +67,7 @@
                         <div id="kt_account_settings_profile_details" class="collapse show">
                             <!--begin::Form-->
                             <form enctype="multipart/form-data"
-                                action="<?= base_url() .  'agent/details/update/' . $AdminData['id']  ?>" id=""
+                                action="<?= base_url() .  'admin/details/update/' . $AdminData['id']  ?>" id=""
                                 method="post" class="form">
                                 <!--begin::Card body-->
                                 <div class="card-body border-top p-9">
@@ -83,7 +83,7 @@
                                                 style="background-image: url('<?= base_url() ?>assets/media/svg/avatars/blank.svg')">
                                                 <!--begin::Preview existing avatar-->
                                                 <div class="image-input-wrapper w-125px h-125px"
-                                                    style="background-image: url(<?= base_url() . 'uploads/agent/image/' . $AdminData['photo'] ?>)">
+                                                    style="background-image: url(<?= base_url() . 'uploads/profile/image/' . $AdminData['photo'] ?>)">
                                                 </div>
                                                 <!--end::Preview existing avatar-->
                                                 <!--begin::Label-->
@@ -97,7 +97,7 @@
                                                     </i>
                                                     <!--begin::Inputs-->
                                                     <input type="file" name="file" accept=".png, .jpg, .jpeg"
-                                                        placeholder="<?= base_url() . 'uploads/agent/image/' . $AdminData['photo'] ?>"
+                                                        placeholder="<?= base_url() . 'uploads/profile/image/' . $AdminData['photo'] ?>"
                                                         style="display: none;" <input type="hidden"
                                                         name="avatar_remove" />
                                                     <!--end::Inputs-->
@@ -144,8 +144,8 @@
                                             value="<?= isset($AdminData['id']) ? $AdminData['id'] : "" ?>" />
                                         <!-- </div> -->
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full
-                                            Name</label>
+                                        <label
+                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Firstname</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8">
@@ -153,10 +153,32 @@
                                             <div class="row">
                                                 <!--begin::Col-->
                                                 <div class="col-lg-12 fv-row">
-                                                    <input type="text" name="name"
+                                                    <input type="text" name="firstname"
                                                         class="form-control form-control-lg form-control-solid"
                                                         placeholder="Full name"
-                                                        value="<?= isset($AdminData['name']) ? $AdminData['name'] : "" ?>" />
+                                                        value="<?= isset($AdminData['firstname']) ? $AdminData['firstname'] : "" ?>" />
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <div class="row mb-6">
+
+                                        <label
+                                            class="col-lg-4 col-form-label required fw-semibold fs-6">Lastname</label>
+                                        <!--end::Label-->
+                                        <!--begin::Col-->
+                                        <div class="col-lg-8">
+                                            <!--begin::Row-->
+                                            <div class="row">
+                                                <!--begin::Col-->
+                                                <div class="col-lg-12 fv-row">
+                                                    <input type="text" name="lastname"
+                                                        class="form-control form-control-lg form-control-solid"
+                                                        placeholder="lastname"
+                                                        value="<?= isset($AdminData['lastname']) ? $AdminData['lastname'] : "" ?>" />
                                                 </div>
                                                 <!--end::Col-->
                                             </div>
@@ -200,12 +222,12 @@
 
                                                 <option value="">Country</option>
                                                 <?php if (isset($CountryList) && is_array($CountryList)) : ?>
-                                                <?php foreach ($CountryList as $data) : ?>
-                                                <option
-                                                    <?php echo isset($AdminData['country']) && $data['name'] === $AdminData['country'] ? 'selected' : '' ?>
-                                                    value="<?= isset($data['name']) ? $data['name'] : '' ?>">
-                                                    <?= isset($data['name']) ? $data['name'] : '' ?></option>
-                                                <?php endforeach; ?>
+                                                    <?php foreach ($CountryList as $data) : ?>
+                                                        <option
+                                                            <?php echo isset($AdminData['country']) && $data['name'] === $AdminData['country'] ? 'selected' : '' ?>
+                                                            value="<?= isset($data['name']) ? $data['name'] : '' ?>">
+                                                            <?= isset($data['name']) ? $data['name'] : '' ?></option>
+                                                    <?php endforeach; ?>
                                                 <?php endif; ?>
 
                                             </select>
@@ -318,135 +340,6 @@
 
                         </div>
                         <!--end::Card header-->
-                        <!--begin::Content-->
-                        <div id="kt_account_settings_signin_method" class="collapse show">
-                            <!--begin::Card body-->
-                            <div class="card-body border-top p-9">
-                                <!--begin::Email Address-->
-
-
-                                <div class="d-flex flex-wrap align-items-center">
-                                    <!--begin::Label-->
-                                    <br>
-                                    <br>
-                                    <div id="kt_signin_email">
-                                        <div class="fs-6 fw-bold mb-1">Agent Valid ID</div>
-                                        <div class="fw-semibold text-gray-600">Add A Valid National ID</div>
-                                    </div>
-                                    <!--end::Label-->
-                                    <!--begin::Edit-->
-                                    <div id="kt_signin_email_eit" class="flex-row-fluid d-none">
-                                        <!--begin::Form-->
-                                        <form id="kt_signin_change_email" enctype="multipart/form-data"
-                                            action="<?= base_url() . 'profile/student/submit/id/' . $AdminData['id'] ?>"
-                                            id="" method="post" class="form" novalidate="novalidate">
-                                            <div class="form-group mb-4">
-                                                <label class="form-label fs-6 fw-semibold">Attachments</label>
-                                                <div class="dropzone">
-                                                    <div class="dz-message  align-items-center">
-                                                        <i class="icon ki-file-upload fs-3 text-primary"></i>
-                                                        <input type="file" name="files">
-                                                        <div class="ms-3">
-                                                            <h3 class="fs-5 fw-bold text-gray-900 mb-1">Upload your
-                                                                Valid Issued ID Card.</h3>
-                                                            <span class="fw-semibold fs-7 text-gray-500">Upload
-                                                                File</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex">
-                                                <button id="kt_signin_submit" type="submit"
-                                                    class="btn btn-primary me-2 px-6">Submit ID</button>
-                                                <button id="kt_signin_cancel" type="button"
-                                                    class="btn btn-color-gray-500 btn-active-light-primary px-6">Cancel</button>
-                                            </div>
-                                        </form>
-                                        <!--end::Form-->
-                                    </div>
-                                    <!--end::Edit-->
-                                    <!--begin::Action-->
-                                    <?php if (isset($AdminData['govt_id']) && $AdminData['govt_id']) : ?>
-                                    <div class="ms-auto">
-                                        <button class="btn btn-danger btn-active-light-primary">Disabled</button>
-                                    </div>
-
-                                    <?php else : ?>
-                                    <div id="kt_signin_email_button" class="ms-auto">
-                                        <button class="btn btn-light btn-active-light-primary">Add ID</button>
-                                    </div>
-                                    <?php endif; ?>
-                                    <!--end::Action-->
-                                </div>
-                                <!--end::Email Address-->
-                                <!--begin::Separator-->
-                                <div class="separator separator-dashed my-6"></div>
-                                <a style="color: red;">
-                                    Please ensure you submit your correct ID. <br>ID Submissions can only be
-                                    made once.
-                                </a>
-                                <!--end::Separator-->
-                                <!--begin::ID image-->
-                                <?php if (isset($AdminData['govt_id']) && $AdminData['govt_id']) : ?>
-                                <div class="mb-17">
-                                    <!--begin::Content-->
-                                    <div class="d-flex flex-stack mb-5">
-                                        <!--begin::Title-->
-                                        <h3 class="text-gray-900">Image</h3>
-                                        <!--end::Title-->
-                                        <!--begin::Link-->
-                                        <!--end::Link-->
-                                    </div>
-                                    <!--end::Content-->
-                                    <!--begin::Separator-->
-                                    <div class="separator separator-dashed mb-9"></div>
-                                    <!--end::Separator-->
-                                    <!--begin::Row-->
-                                    <div class="row g-10">
-                                        <!--begin::Col-->
-                                        <div class="col-md-4">
-                                            <!--begin::Hot sales post-->
-                                            <div class="card-xl-stretch ms-md-6">
-                                                <!--begin::Overlay-->
-                                                <a class="d-block overlay" data-fslightbox="lightbox-hot-sales"
-                                                    href="<?= base_url() .  'uploads/profile/agentid/' . $AdminData['govt_id'] ?>">
-                                                    <!--begin::Image-->
-                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"
-                                                        style="background-image:url('<?= base_url() .  'uploads/profile/agentid/' . $AdminData['govt_id'] ?>')">
-                                                    </div>
-                                                    <!--end::Image-->
-                                                    <!--begin::Action-->
-                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-                                                        <i class="ki-duotone ki-eye fs-2x text-white">
-                                                            <span class="path1"></span>
-                                                            <span class="path2"></span>
-                                                            <span class="path3"></span>
-                                                        </i>
-                                                    </div>
-                                                    <!--end::Action-->
-                                                </a>
-                                            </div>
-                                            <!--end::Hot sales post-->
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Row-->
-                                </div>
-                                <?php else : ?>
-                                <div class="mb-17" style="display: none;">
-                                    <!-- If $Ticketdetails['photo'] is not set, hide the entire block -->
-                                    <!-- This block will be hidden because display is set to none -->
-                                </div>
-                                <?php endif; ?>
-                                <!--begin::ID image-->
-
-                                <!--end::Password-->
-
-                                <!--end::Notice-->
-                            </div>
-                            <!--end::Card body-->
-                        </div>
-                        <!--end::Content-->
 
                     </div>
                     <!--end::Sign-in Method-->
@@ -489,37 +382,37 @@
 <script src="<?= base_url() ?>assets/js/custom/utilities/modals/users-search.js"></script>
 <!--end::Custom Javascript-->
 <script>
-document.querySelector('form').addEventListener('submit', function(event) {
-    const dobInput = document.getElementById('dob').value;
-    if (!dobInput) {
-        alert('Please enter your Date of Birth.');
-        event.preventDefault();
-        return;
-    }
+    document.querySelector('form').addEventListener('submit', function(event) {
+        const dobInput = document.getElementById('dob').value;
+        if (!dobInput) {
+            alert('Please enter your Date of Birth.');
+            event.preventDefault();
+            return;
+        }
 
-    const dob = new Date(dobInput);
-    const today = new Date();
-    const age = today.getFullYear() - dob.getFullYear();
-    const monthDiff = today.getMonth() - dob.getMonth();
-    const dayDiff = today.getDate() - dob.getDate();
+        const dob = new Date(dobInput);
+        const today = new Date();
+        const age = today.getFullYear() - dob.getFullYear();
+        const monthDiff = today.getMonth() - dob.getMonth();
+        const dayDiff = today.getDate() - dob.getDate();
 
-    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-        age--;
-    }
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age--;
+        }
 
-    if (age < 18) {
-        alert('You must be at least 18 years old.');
-        event.preventDefault();
-    }
-});
+        if (age < 18) {
+            alert('You must be at least 18 years old.');
+            event.preventDefault();
+        }
+    });
 </script>
 <script>
-new tempusDominus.TempusDominus(document.getElementById("kt_td_picker_localization"), {
-    localization: {
-        locale: "en",
-        startOfTheWeek: 1,
-        format: "dd/MM/yyyy"
-    }
-});
+    new tempusDominus.TempusDominus(document.getElementById("kt_td_picker_localization"), {
+        localization: {
+            locale: "en",
+            startOfTheWeek: 1,
+            format: "dd/MM/yyyy"
+        }
+    });
 </script>
 <?= $this->endSection() ?>

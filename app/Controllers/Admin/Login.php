@@ -85,7 +85,7 @@ class Login extends BaseController
                         ]);
 
                         // Redirect to the dashboard or another page
-                        return redirect()->to('/user/profiledash')->with('success', 'Login successful.<br><br>Kindly make payment to access more features we provide.');
+                        return redirect()->to('/admin/profiledash')->with('success', 'Login successful.<br><br>Kindly make payment to access more features we provide.');
                     } else {
                         return redirect()->back()->withInput()->with('error', 'Inactive account');
                     }

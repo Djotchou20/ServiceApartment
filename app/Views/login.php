@@ -29,7 +29,7 @@
     <link href="<?= base_url() ?>assetss/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <script>
-    // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
+        // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }
     </script>
 </head>
 <!--end::Head-->
@@ -38,23 +38,23 @@
 <body id="kt_body" class="app-blank">
     <!--begin::Theme mode setup on page load-->
     <script>
-    var defaultThemeMode = "light";
-    var themeMode;
-    if (document.documentElement) {
-        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
-            themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
-        } else {
-            if (localStorage.getItem("data-bs-theme") !== null) {
-                themeMode = localStorage.getItem("data-bs-theme");
+        var defaultThemeMode = "light";
+        var themeMode;
+        if (document.documentElement) {
+            if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+                themeMode = document.documentElement.getAttribute("data-bs-theme-mode");
             } else {
-                themeMode = defaultThemeMode;
+                if (localStorage.getItem("data-bs-theme") !== null) {
+                    themeMode = localStorage.getItem("data-bs-theme");
+                } else {
+                    themeMode = defaultThemeMode;
+                }
             }
+            if (themeMode === "system") {
+                themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+            }
+            document.documentElement.setAttribute("data-bs-theme", themeMode);
         }
-        if (themeMode === "system") {
-            themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        }
-        document.documentElement.setAttribute("data-bs-theme", themeMode);
-    }
     </script>
     <!--end::Theme mode setup on page load-->
     <!--begin::Root-->
@@ -93,7 +93,7 @@
                     <!--begin::Body-->
                     <div class="py-20">
                         <!--begin::Form-->
-                        <form class="form w-100" action="<?= base_url('login') ?>" method="post">
+                        <form class="form w-100" action="<?= base_url('admin-login') ?>" method="post">
                             <div class="text-start mb-10">
                                 <h1 class="text-gray-900 mb-3 fs-3x" data-kt-translate="sign-up-title">Sign in as member
                                 </h1>
@@ -103,18 +103,18 @@
 
                             <!-- Display validation errors if any -->
                             <?php if (session()->has('errors')) : ?>
-                            <div class="alert alert-danger">
-                                <ul>
-                                    <?php foreach (session('errors') as $error) : ?>
-                                    <li><?= esc($error) ?></li>
-                                    <?php endforeach ?>
-                                </ul>
-                            </div>
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <?php foreach (session('errors') as $error) : ?>
+                                            <li><?= esc($error) ?></li>
+                                        <?php endforeach ?>
+                                    </ul>
+                                </div>
                             <?php endif ?>
 
                             <!-- Display success message if any -->
                             <?php if (session()->has('success')) : ?>
-                            <div class="alert alert-success"><?= session('success') ?></div>
+                                <div class="alert alert-success"><?= session('success') ?></div>
                             <?php endif ?>
 
                             <!-- <div class="fv-row mb-10">
@@ -129,7 +129,7 @@
                                 <input class="form-control form-control-lg form-control-solid" type="email"
                                     placeholder="Email" name="email" value="<?= old('email') ?>" autocomplete="off" />
                                 <?php if (isset(session('errors')['email'])) : ?>
-                                <div class="text-danger"><?= session('errors')['email'] ?></div>
+                                    <div class="text-danger"><?= session('errors')['email'] ?></div>
                                 <?php endif; ?>
                             </div>
 
@@ -137,7 +137,7 @@
                                 <input class="form-control form-control-lg form-control-solid" type="password"
                                     placeholder="Password" name="password" autocomplete="off" />
                                 <?php if (isset(session('errors')['password'])) : ?>
-                                <div class="text-danger"><?= session('errors')['password'] ?></div>
+                                    <div class="text-danger"><?= session('errors')['password'] ?></div>
                                 <?php endif; ?>
                             </div>
 
@@ -227,7 +227,7 @@
     <!--end::Root-->
     <!--begin::Javascript-->
     <script>
-    var hostUrl = "<?= base_url() ?>assetss/";
+        var hostUrl = "<?= base_url() ?>assetss/";
     </script>
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <!-- <script src="<?= base_url() ?>assetss/plugins/global/plugins.bundle.js"></script> -->

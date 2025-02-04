@@ -8,52 +8,7 @@ use App\Models\MembersModel;
 
 class Profile extends BaseController
 {
-    // public function index($id = null)
-    // {
-    //     $page = new \stdClass();
-    //     $page->title = 'Dashboard';
-
-    //     // Start the session and check if it's valid
-    //     $session = session();
-
-    //     // Check if the session is expired
-    //     // $userId = $session->get('user_id');
-
-    //     // // Update the last activity time
-    //     // $session->set('last_activity', time());
-
-    //     // // Use the user ID from the route if provided, otherwise get it from the session
-    //     // $userId = $id ?? $session->get('user_id'); // Ensure this matches the session key
-
-    //     // Load the MembersModel
-    //     $membersModel = new MembersModel();
-    //     $username = session()->get('username');
-    //     // $studentId = session()->get('student_id');
-    //     // Fetch student details
-    //     $agentData = $membersModel->where('username', $username)->first();
-    //     // Fetch user data by ID
-    //     // $user = $membersModel->find($userId);
-
-    //     // $lastActivity = $session->get('last_activity');
-
-    //     // if ($userId === null || $lastActivity === null || $lastActivity < time() - 7200) {
-    //     //     // Destroy the session
-    //     //     $session->destroy();
-
-    //     //     // Redirect to the login page
-    //     //     return redirect()->to('/login');
-    //     // }
-
-    //     // Prepare data for the view
-    //     $data = [
-    //         'AgentData' => $agentData,
-    //         'activeMenuItem' => 'profile',
-    //         // 'user' => $user,
-    //     ];
-
-    //     return view('user/profiledash', $data);
-    // }
-    public function index($id = null)
+    public function index()
     {
         $page = new \stdClass();
         $page->title = 'Dashboard';
@@ -61,21 +16,12 @@ class Profile extends BaseController
         // Start the session and check if it's valid
         $session = session();
 
-        // Check if the session is expired
-        // $userId = $session->get('user_id');
-
-        // // Update the last activity time
-        // $session->set('last_activity', time());
-
-        // // Use the user ID from the route if provided, otherwise get it from the session
-        // $userId = $id ?? $session->get('user_id'); // Ensure this matches the session key
-
         // Load the MembersModel
         $membersModel = new MembersModel();
         $username = session()->get('username');
         // $studentId = session()->get('student_id');
         // Fetch student details
-        $agentData = $membersModel->where('username', $username)->first();
+        $adminData = $membersModel->where('username', $username)->first();
         // Fetch user data by ID
         // $user = $membersModel->find($userId);
 
@@ -91,12 +37,17 @@ class Profile extends BaseController
 
         // Prepare data for the view
         $data = [
-            'AgentData' => $agentData,
+            'AdminData' => $adminData,
             'activeMenuItem' => 'profile',
             // 'user' => $user,
         ];
 
-        return view('user/profiledash', $data);
+
+        // echo "<pre>";
+        // print_r($data);
+        // die;
+
+        return view('admin/profiledash', $data);
     }
 
 
@@ -121,7 +72,7 @@ class Profile extends BaseController
         // ];
         $activeMenuItem = 'student/details'; // Set active menu item
         $this->viewBag['activeMenuItem'] = $activeMenuItem;
-        return view('\user\profile_settings', $this->viewBag);
+        return view('\admin\profile_settings', $this->viewBag);
     }
 
 
@@ -164,7 +115,6 @@ class Profile extends BaseController
             'phone' => $post['phone'],
             'address' => $post['address'],
             'company_name' => $post['company_name'],
-            // 'course' => $post['course'],
             'country' => $post['country'],
         ];
 
@@ -181,7 +131,7 @@ class Profile extends BaseController
         $updateResult = $Model->update($id, $data);
 
         if ($updateResult) {
-            return redirect()->to('user/profiledash')->with('success', 'Details update was successful');
+            return redirect()->to('admin/profiledash')->with('success', 'Details update was successful');
         } else {
             return redirect()->back()->with('error', 'Request was unsuccessful');
         }
