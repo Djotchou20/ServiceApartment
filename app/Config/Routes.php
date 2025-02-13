@@ -33,7 +33,7 @@ $routes->post('admin/details/update/(:any)', 'Admin\Profile::userDetailsUpdate/$
 
 // $routes->get('register_apart', 'Agents\SignupController::register_age');
 
-$routes->get('payment-history', 'Agents\paymentController::index');
+$routes->get('payment-history', 'Agents\PaymentController::index');
 $routes->get('agent/profiledash', 'Agents\Profile::index');
 $routes->get('user/settings', 'Agents\Profile::ProfileSettings');
 $routes->post('agent/details/update/(:any)', 'Agents\Profile::userDetailsUpdate/$1');
