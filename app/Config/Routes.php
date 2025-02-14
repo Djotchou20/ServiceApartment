@@ -12,7 +12,7 @@ $routes->get('apartment', 'Apartment::index');
 $routes->get('contact', 'Contact::index');
 $routes->post('submit', 'Contact::submit');
 
-$routes->get('register_apartment', 'Admin\SignupController::index');
+$routes->get('admin-panel', 'Admin\SignupController::index');
 $routes->post('register_apart', 'Admin\SignupController::register_apart');
 $routes->get('register_apart', 'Admin\SignupController::register_apart');
 
@@ -25,7 +25,7 @@ $routes->get('login', 'Agents\Login::agents');
 $routes->post('login', 'Agents\Login::agentLogin');
 $routes->get('logout', 'Agents\Login::agentLogout');
 
-$routes->get('register-agents', 'Agents\SignupController::index');
+$routes->get('register-as-agent', 'Agents\SignupController::index');
 $routes->post('submit-agents-data', 'Agents\SignupController::register_agents');
 $routes->get('admin/profiledash', 'Admin\Profile::index');
 $routes->get('admin/settings', 'Admin\Profile::ProfileSettings');

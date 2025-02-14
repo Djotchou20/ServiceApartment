@@ -26,10 +26,14 @@ class App extends BaseConfig
             $root = (isset($_SERVER['HTTPS']) ? "https://" : "http://") . $_SERVER['HTTP_HOST'];
             $root .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
         } else {
-            $root = 'http://localhost:8080';
+            $root = 'http://localhost';
+            // $root = 'https://serviceapartment.africa';
         }
         $this->baseURL = $root;
     }
+    
+    // public $baseURL = 'https://serviceapartment.africa/';
+
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

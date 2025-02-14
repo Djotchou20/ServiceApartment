@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'localhost',
         'username'     => 'root',
-        'password'     => 'Focused199892#',
+        'password'     => '',
         'database'     => 'serviceapartment',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',

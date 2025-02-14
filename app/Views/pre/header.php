@@ -7,7 +7,7 @@
                 <img class="img-fluid" src="<?= base_url() ?>assets/img/logo_test.png" alt="Icon" style="width: 55px; height: 55px;">
             </div>
             <!-- <h1 class="m-0 text-primary">Makaan</h1> -->
-            <h1 class="m-0 text-primary">APARTMENT</h1>
+            <h1 class="m-0 text-primary"></h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -38,13 +38,13 @@
                 <a href="<?= base_url() ?>contact" class="nav-item nav-link <?= (isset($activeMenuItem) && $activeMenuItem == 'contact') ? 'active' : '' ?>">Contact</a>
 
             </div>
-            <a href="<?= base_url() ?>register_apartment" class="btn btn-primary px-3 d-none d-lg-flex <?= (isset($activeMenuItem) && $activeMenuItem == 'register_apart') ? 'active' : '' ?>">Register as an Agent</a>
+            <a href="<?= base_url() ?>register-as-agent" class="btn btn-primary px-3 d-none d-lg-flex <?= (isset($activeMenuItem) && $activeMenuItem == 'register_apart') ? 'active' : '' ?>">Register as an Agent</a>
             <!-- <a href="<?= base_url('register_apartment') ?>">Get Started</a> -->
                 <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="dropdown">Get Started</a>
                     <div class="dropdown-menu rounded-0 m-0">
-                        <a href="<?= base_url('register_apartment') ?>" class="dropdown-item">Sign up</a>
-                        <a href="<?= base_url('login') ?>" class="dropdown-item">Login</a>
+                        <a href="</?= base_url('register_apartment') ?>" class="dropdown-item">Sign up</a>
+                        <a href="</?= base_url('login') ?>" class="dropdown-item">Login</a>
                     </div>
                 </div> -->
 

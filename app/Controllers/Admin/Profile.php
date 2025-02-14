@@ -72,7 +72,7 @@ class Profile extends BaseController
         // ];
         $activeMenuItem = 'student/details'; // Set active menu item
         $this->viewBag['activeMenuItem'] = $activeMenuItem;
-        return view('\admin\profile_settings', $this->viewBag);
+        return view('/admin/profile_settings', $this->viewBag);
     }
 
 

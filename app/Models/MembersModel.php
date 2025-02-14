@@ -17,6 +17,7 @@ class MembersModel extends Model
         'firstname',
         'lastname',
         'country',
+        'username',
         'address',
         'photo',
         'company_name',

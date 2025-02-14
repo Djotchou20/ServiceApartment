@@ -82,8 +82,16 @@ class SignupController extends BaseController
         }
 
         $formData['password'] = password_hash($formData['password'], PASSWORD_DEFAULT);
-        $username = $formData['firstname'];
+        
+        $name = $formData['firstname']; // e.g., "mohammed ibrahim"
+        $firstName = explode(' ', trim($name))[0]; // Extracts "mohammed"
+        $randomNumber = rand(100, 999); // Generates a random number between 100 and 999
+
+        $username = strtolower($firstName) . $randomNumber; // e.g., "mohammed523"
         $formData['username'] = $username;
+        
+        // $username = $formData['firstname'];
+        // $formData['username'] = $username;
         // echo "<pre>";
         // print_r($formData);
         // die;
@@ -95,7 +103,7 @@ class SignupController extends BaseController
 
         if ($affected > 0) {
             $this->sendRegistrationEmail($formData['email'], $formData['firstname']);
-            return redirect()->to('login')->with('success', 'Registration successful. Please check your email for confirmation.');
+            return redirect()->to('admin-login')->with('success', 'Registration successful. Please check your email for confirmation.');
         } else {
             return redirect()->back()->withInput()->with('error', 'Registration not successful');
         }

@@ -77,7 +77,7 @@ class Profile extends BaseController
         // ];
         $activeMenuItem = 'student/details'; // Set active menu item
         $this->viewBag['activeMenuItem'] = $activeMenuItem;
-        return view('\agent\profile_settings', $this->viewBag);
+        return view('/agent/profile_settings', $this->viewBag);
     }
 
 
