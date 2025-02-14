@@ -10,7 +10,7 @@
             <h1 class="display-5 animated fadeIn mb-4">List. <span class="text-primary">Book.</span> Stay</h1>
             <p class="animated fadeIn mb-4 pb-2">Bringing top-quality short-let apartments to renters while helping landlords maximize their earnings
             </p>
-            <a href="<?php echo base_url()?>register-as-agent" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+            <a href="#open-modal" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
         </div>
         <div class="col-md-6 animated fadeIn">
             <div class="owl-carousel header-carousel">
@@ -27,7 +27,6 @@
 
 <br> <br> <br>
 <!-- Header End -->
-
 
 <div class="container-xxl py-5">
     <div class="container">

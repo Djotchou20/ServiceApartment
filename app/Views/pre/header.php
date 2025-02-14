@@ -20,34 +20,11 @@
                 <a href="<?= base_url() ?>about_us" class="nav-item nav-link <?= (isset($activeMenuItem) && $activeMenuItem == 'about') ? 'active' : '' ?>">About</a>
                 <a href="<?= base_url() ?>apartment" class="nav-item nav-link <?= (isset($activeMenuItem) && $activeMenuItem == 'property') ? 'active' : '' ?>">Apartment</a>
                 
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="property-list.html" class="dropdown-item">Property List</a>
-                        <a href="property-type.html" class="dropdown-item">Property Type</a>
-                        <a href="property-agent.html" class="dropdown-item">Property Agent</a>
-                    </div>
-                </div> -->
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Error</a>
-                    </div>
-                </div> -->
+
                 <a href="<?= base_url() ?>contact" class="nav-item nav-link <?= (isset($activeMenuItem) && $activeMenuItem == 'contact') ? 'active' : '' ?>">Contact</a>
 
             </div>
-            <a href="<?= base_url() ?>register-as-agent" class="btn btn-primary px-3 d-none d-lg-flex <?= (isset($activeMenuItem) && $activeMenuItem == 'register_apart') ? 'active' : '' ?>">Register as an Agent</a>
-            <!-- <a href="<?= base_url('register_apartment') ?>">Get Started</a> -->
-                <!-- <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle btn btn-primary px-3 d-none d-lg-flex" data-bs-toggle="dropdown">Get Started</a>
-                    <div class="dropdown-menu rounded-0 m-0">
-                        <a href="</?= base_url('register_apartment') ?>" class="dropdown-item">Sign up</a>
-                        <a href="</?= base_url('login') ?>" class="dropdown-item">Login</a>
-                    </div>
-                </div> -->
-
+            <a href="#open-modal" class="btn btn-primary px-3 d-none d-lg-flex ">Join Us Today</a>
         </div>
     </nav>
 </div>
