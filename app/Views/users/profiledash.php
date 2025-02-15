@@ -158,7 +158,7 @@
                                                     </i>
                                                     <?= isset($userData['phone']) ? lcfirst($userData['phone']) : "No phone" ?>
                                                     <a
-                                                        class="d-flex align-items-center text-gray-500 text-hover-primary me-5 mb-2">
+                                                    class="d-flex align-items-center text-gray-500 text-hover-primary mb-2">
                                                         <i class="ki-duotone ki-geolocation fs-4 me-1">
                                                             <span class="path1"></span>
                                                             <span class="path2"></span>

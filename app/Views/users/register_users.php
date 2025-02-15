@@ -97,7 +97,7 @@ License: For each use you must have a valid license purchased only from above li
                         <div class="m-0">
                             <span class="text-gray-500 fw-bold fs-5 me-2" data-kt-translate="sign-up-head-desc">Already
                                 a member ?</span>
-                            <a href="<?= base_url() ?>login" class="link-primary fw-bold fs-5"
+                            <a href="<?= base_url() ?>user-login" class="link-primary fw-bold fs-5"
                                 data-kt-translate="sign-up-head-link">Sign In</a>
                         </div>
                         <!--end::Sign Up link=-->

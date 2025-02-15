@@ -84,9 +84,9 @@ class Login extends BaseController
                             'roles' => $user['role'],
                             'logged_in' => TRUE,
                         ];
-                        echo "<pre>";
-                        print_r($sess);
-                        die;
+                        // echo "<pre>";
+                        // print_r($sess);
+                        // die;
                         $session->set($sess);
 
 

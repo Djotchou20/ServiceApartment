@@ -10,6 +10,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('about_us', 'About::index');
 $routes->get('apartment', 'Apartment::index');
+$routes->get('apartment-view', 'ApartmentDetailsController::index');
+
 $routes->get('contact', 'Contact::index');
 $routes->post('submit', 'Contact::submit');
 

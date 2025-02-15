@@ -86,7 +86,7 @@ a {
     </div>
     <br>
     <div>
-      <small>Don't have an account? <a href="<?php echo base_url()?>register-as-agent" style="color: blue;">Register as an Agent</a> or <a href="<?php echo base_url()?>user-signup" style="color: blue;">Sign Up as a Guest</a>.</small>
+      <small>Don't have an account? <a href="<?php echo base_url()?>register-as-agent" style="color: blue;">Agent Signup</a> or <a href="<?php echo base_url()?>user-signup" style="color: blue;">Guest Signup</a>.</small>
     </div>
     <br>
     <div>
