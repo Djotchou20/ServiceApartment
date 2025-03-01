@@ -134,11 +134,14 @@
                                                     value="1" />
                                             </div>
                                         </th>
+                                        <th class="min-w-130px">Thumbnail</th>
                                         <th class="min-w-130px">Posted BY</th>
                                         <th class="min-w-100px">Prop Type</th>
                                         <th class="min-w-60px">Status</th>
                                         <th class="min-w-135px">Bed / Bathrooms</th>
                                         <th class="min-w-80px">Price </th>
+                                        <th class="min-w-135px">Location</th>
+
                                         <th class="min-w-100px">Visiblity</th>
                                         <th class="text-end min-w-70px">Actions</th>
                                     </tr>
@@ -152,6 +155,17 @@
                                             <div class="form-check form-check-sm form-check-custom form-check-solid">
                                                 <input class="form-check-input" type="checkbox"
                                                     value="<?= $data['id'] ?>" />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div
+                                                class="symbol symbol-50px symbol-lg-60px symbol-fixed position-relative">
+                                                <img src="<?= base_url() . ($data['thumbnail'] ?? 'default.jpg') ?>"
+                                                    alt="<?= isset($data['name']) ? ucfirst($data['name']) : 'No Name' ?>" />
+
+                                                <div
+                                                    class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px">
+                                                </div>
                                             </div>
                                         </td>
                                         <td>
@@ -179,9 +193,13 @@
                                             <!-- Using property ID as room number -->
                                         </td>
                                         <td>
-                                            <div
-                                                class="badge <?= ($data['visibility']) ? 'badge-success' : 'badge-light-danger' ?>">
-                                                <?= ($data['visibility']) ? 'visible' : 'hidden' ?>
+                                            <?= $data['location'] ?>
+                                            <!-- Using property ID as room number -->
+                                        </td>
+                                        <td>
+                                        <div
+                                                class="badge <?= ($data['visibility'] == 'visible') ? 'badge-success' : 'badge-light-danger' ?>">
+                                                <?= ($data['visibility'] == 'visible') ? 'Visible' : 'Hidden' ?>
                                             </div>
                                         </td>
                                         <td class="text-end">
@@ -191,8 +209,14 @@
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4"
                                                 data-kt-menu="true">
                                                 <div class="menu-item px-3">
-                                                    <a href="<?= base_url() . 'admin/bookings/payment/summary/' . $data['id'] ?>"
-                                                        class="menu-link px-3">Details</a>
+                                                    <a href="<?= base_url() ?>view/apartment/<?= $data['prop_url']?> "
+                                                        class="menu-link px-3">View Details</a>
+                                                </div>
+                                                <div class="menu-item px-3">
+                                                    <a href="<?= base_url() . 'agent/properties/status/' . $data['id'] ?>"
+                                                        class="menu-link px-3">
+                                                        <?= ($data['visibility'] == 'visible') ? 'Archive' : 'Make Visible' ?>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </td>

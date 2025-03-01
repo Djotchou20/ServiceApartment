@@ -49,6 +49,7 @@
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                    <?php $user_role = session()->get('user_role'); ?>
                         <!--begin:Menu link-->
                         <span class="menu-link">
                             <span class="menu-icon">
@@ -58,20 +59,23 @@
                                     <span class="path3"></span>
                                 </i>
                             </span>
-                            <span class="menu-title">Profile Dashboard</span>
+                            <span class="menu-title"> Dashboard</span>
                             <span class="menu-arrow"></span>
                         </span>
                         <!--end:Menu link-->
                         <!--begin:Menu sub-->
                         <div class="menu-sub menu-sub-accordion">
                             <!--begin:Menu item-->
+
+                            
+                        <?php if ($user_role == 'admin'): ?>
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="<?= base_url() ?>/agent/profiledash">
+                                <a class="menu-link" href="<?= base_url() ?>/admin/profiledash">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">User Profile</span>
+                                    <span class="menu-title">Admin Profile</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
@@ -95,7 +99,7 @@
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Post Property</span>
+                                    <span class="menu-title">Add Property</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
@@ -107,13 +111,62 @@
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Properties</span>
+                                    <span class="menu-title">Property List</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
-                            <!--end:Menu item-->
-<!-- Agent Side Bar -->
+
+ <!--begin:Menu item-->
+ <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>admin/register-agent/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Create Agents</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+
                              <!--begin:Menu item-->
+                             <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>admin/agents-list/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Agent List</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+
+                              <!--begin:Menu item-->
+                              <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>admin/users-list/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Users List</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>admin/service-settings/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Settings</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                        <?php elseif ($user_role == 'agent'): ?>
+                             <!--end:Menu item-->
+                                   <!-- Agent Side Bar -->
+                             <!--begin:Menu item-->
+
                              <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>/agent/profiledash">
@@ -128,7 +181,7 @@
                             <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="<?= base_url() ?>payment-history">
+                                <a class="menu-link" href="<?= base_url() ?>agent/payment-history">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -136,23 +189,24 @@
                                 </a>
                                 <!--end:Menu link-->
                             </div>
-                            <!--end:Menu item-->
-                            <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="<?= base_url() ?>properties/create">
+                                <a class="menu-link" href="<?= base_url() ?>agent/booking-history">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Post Property</span>
+                                    <span class="menu-title">Booking History</span>
                                 </a>
                                 <!--end:Menu link-->
                             </div>
                             <!--end:Menu item-->
                             <!--begin:Menu item-->
+                            <!--  -->
+                            <!--end:Menu item-->
+                            <!--begin:Menu item-->
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="<?= base_url() ?>properties/">
+                                <a class="menu-link" href="<?= base_url() ?>agent/apartments/">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -162,6 +216,42 @@
                             </div>
                             <!--end:Menu item-->
                             <!-- End Agent Sidebar -->
+                        <?php elseif ($user_role == 'user'): ?>
+                           
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>user/profile/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Profile</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>user/settings/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Profile Settings</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="#">
+                                <!-- <a class="menu-link" href="<?= base_url() ?>user/bookings/"> -->
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">My Bookings</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                        <?php endif; ?>
+                            
+                          
 
                         </div>
                         <!--end:Menu sub-->

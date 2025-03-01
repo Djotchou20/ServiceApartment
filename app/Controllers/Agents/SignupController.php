@@ -50,13 +50,6 @@ class SignupController extends BaseController
                     'min_length' => 'Password must be at least 8 characters long.',
                 ],
             ],
-            'confirm-password' => [
-                'rules' => 'required|matches[password]',
-                'errors' => [
-                    'required' => 'Confirm Password is required.',
-                    'matches' => 'Confirm Password does not match the Password.',
-                ],
-            ],
             'phone' => [
                 'rules' => 'required|regex_match[/^\+?[0-9\s\-\(\)]+$/]',
                 'errors' => [
@@ -83,16 +76,16 @@ class SignupController extends BaseController
         // print_r($formData);
         // die;
 
-        unset($formData['confirm-password']);
+        // unset($formData['confirm-password']);
 
         $AgentModel = new AgentModel();
         $affected = $AgentModel->insert($formData);
 
         if ($affected > 0) {
             $this->sendRegistrationEmail($formData['email'], $formData['name']);
-            return redirect()->to('login')->with('success', 'Registration successful. Please check your email for confirmation.');
+            return redirect()->back()->with('success', 'Registration successful. Please check your email for confirmation.');
         } else {
-            return redirect()->back()->withInput()->with('error', 'Registration not successful');
+            return redirect()->back()->with('error', 'Registration not successful');
         }
     }
 

@@ -1,5 +1,6 @@
-<?= $this->extend('default_view') ?>
-<?= $this->section('content') ?>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -65,4 +66,4 @@
 </body>
 
 
-<?= $this->endSection() ?>
+</html>

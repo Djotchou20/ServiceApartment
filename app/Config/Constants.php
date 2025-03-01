@@ -82,6 +82,15 @@ define('SUCCESS', 'success');
 define('INFO', 'info');
 define('ERROR', 'error');
 define('WARNING', 'warning');
+
+
+//PAYSTACKK VERIFICATION URL
+define('PAYSTACK_VERIFY_URL', 'https://api.paystack.co/transaction/verify/');
+// define('PAYSTACK_SECRET_KEYS', 'sk_live_b7789129cf35b3856eecabce70026acfd74f896b');
+// define('PAYSTACK_PUBLIC_KEYS', 'pk_live_b0d03e1981abf22facc35f9e2dc17d9ebcd87a93');
+define('PAYSTACK_SECRET_KEYS', 'sk_test_c4be2e38bb6e4e7b4e87248f7cfb83f36e787cfa');
+define('PAYSTACK_PUBLIC_KEYS', 'pk_test_3c114b9e0fa0010b337287323ea89a14a545a64b');
+
 /**
  * @deprecated Use \CodeIgniter\Events\Events::PRIORITY_LOW instead.
  */

@@ -294,17 +294,6 @@
                                         </div>
                                         <!--end::Wrapper-->
                                         <!--begin::Progress-->
-                                        <!-- <div class="d-flex align-items-center w-200px w-sm-300px flex-column mt-3">
-                                            <div class="d-flex justify-content-between w-100 mt-auto mb-2">
-                                                <span class="fw-semibold fs-6 text-gray-500">Profile Compleation</span>
-                                                <span class="fw-bold fs-6">50%</span>
-                                            </div>
-                                            <div class="h-5px mx-3 w-100 bg-light mb-3">
-                                                <div class="bg-success rounded h-5px" role="progressbar"
-                                                    style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                        </div> -->
                                         <!--end::Progress-->
                                     </div>
                                     <!--end::Stats-->
@@ -313,42 +302,9 @@
                             </div>
                             <!--end::Details-->
                             <!--begin::Navs-->
-                            <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Overview</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Projects</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 active"
-                                        href="pages/user-profile/campaigns.html">Campaigns</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/documents.html">Documents</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/followers.html">Followers</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/activity.html">Activity</a>
-                                </li>
-                                <!--end::Nav item-->
-                            </ul>
+                            <br>
+                            <br>
+
                             <!--begin::Navs-->
                         </div>
                     </div>

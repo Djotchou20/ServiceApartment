@@ -81,7 +81,7 @@ class Login extends BaseController
                             'user_id' => $user['id'],
                             'email' => $user['email'],
                             'username' => $user['username'],
-                            'roles' => $user['role'],
+                            'user_role' => $user['role'],
                             'logged_in' => TRUE,
                         ];
                         // echo "<pre>";

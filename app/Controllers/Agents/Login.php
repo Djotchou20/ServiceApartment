@@ -30,7 +30,7 @@ class Login extends BaseController
         return view('agent/login_agents', $data);
     }
 
-    public function agentLogin()
+    public function Auth()
     {
         $validation = \Config\Services::validation();
 
@@ -57,6 +57,10 @@ class Login extends BaseController
             'password' => $this->request->getPost('password'),
         ];
 
+        //  echo "<pre>";
+        //                 print_r($formData);
+        //                 die;
+
         // Validate the data
         if (!$this->validate($validationRules)) {
             return redirect()->back()->withInput()->with('errors', $validation->getErrors());
@@ -80,6 +84,8 @@ class Login extends BaseController
                         $sess = [
                             'user_id' => $user['id'],
                             'email' => $user['email'],
+                            'user_role' => $user['role'],
+
                             'username' => $user['username'],
                             'logged_in' => TRUE,
                         ];
@@ -90,7 +96,7 @@ class Login extends BaseController
 
 
                         // Redirect to the dashboard or another page
-                        return redirect()->to('/agent/profiledash')->with('success', 'Login successful.<br><br>Kindly make payment to access more features we provide.');
+                        return redirect()->to('/agent/profiledash')->with('success', 'Login successful.');
                     } else {
                         return redirect()->back()->withInput()->with('error', 'Inactive account');
                     }

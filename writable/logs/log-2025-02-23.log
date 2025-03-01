@@ -1,0 +1,639 @@
+INFO - 2025-02-23 18:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 18:50:58 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for sandbox.smtp.mailtrap.io failed: Temporary failure in name resolution in /opt/lampp/htdocs/ServiceApartment/system/Email/Email.php:1896
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', '/opt/lampp/htdo...', 1896)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Email/Email.php(1896): fsockopen('sandbox.smtp.ma...', 2525, NULL, NULL, 5)
+#2 /opt/lampp/htdocs/ServiceApartment/system/Email/Email.php(1809): CodeIgniter\Email\Email->SMTPConnect()
+#3 /opt/lampp/htdocs/ServiceApartment/system/Email/Email.php(1694): CodeIgniter\Email\Email->sendWithSmtp()
+#4 /opt/lampp/htdocs/ServiceApartment/system/Email/Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#5 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/SignupController.php(151): CodeIgniter\Email\Email->send()
+#6 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/SignupController.php(105): App\Controllers\Admin\SignupController->sendRegistrationEmail('dream@gmail.com', 'admin')
+#7 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Admin\SignupController->register_apart()
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\SignupController))
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-23 18:50:58 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-02-23 18:50:58 --> 
+ERROR - 2025-02-23 18:50:58 --> Failed to send registration email to dream@gmail.com
+INFO - 2025-02-23 18:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 18:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 18:57:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE) in /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /opt/lampp/htdocs/ServiceApartment/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/ServiceApartment/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/ServiceApartment/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Agents/PropertyController.php(76): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Agents\PropertyController->store()
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agents\PropertyController))
+#10 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-23 18:57:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+[Method: POST, Route: properties/store]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :area:, :status:, :username:, :user_id:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Agents/PropertyController.php(76): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Agents\PropertyController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agents\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 18:57:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (\'dream free\', \'freee\', \'1\', \'1\', \'3400\', \'3\', \'2\', \'45000\', \'rented\', \'admin807\', \'41\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (\'dream free\', \'freee\', \'1\', \'1\', \'3400\', \'3\', \'2\', \'45000\', \'rented\', \'admin807\', \'41\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :area:, :status:, :username:, :user_id:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Agents/PropertyController.php(76): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Agents\PropertyController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agents\PropertyController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 18:57:51 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (\'dream free\', \'freee\', \'1\', \'1\', \'3400\', \'3\', \'2\', \'45000\', \'rented\', \'admin807\', \'41\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (\'dream free\', \'freee\', \'1\', \'1\', \'3400\', \'3\', \'2\', \'45000\', \'rented\', \'admin807\', \'41\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (\'dream free\', \'freee\', \'1\', \'1\', \'3400\', \'3\', \'2\', \'45000\', \'rented\', \'admin807\', \'41\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `area`, `status`, `username`, `user_id`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :area:, :status:, :username:, :user_id:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Agents/PropertyController.php(76): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Agents\PropertyController->store()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agents\PropertyController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:16:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 19:25:38 --> mysqli_sql_exception: Unknown column 'toilets' in 'field list' in /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /opt/lampp/htdocs/ServiceApartment/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/ServiceApartment/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/ServiceApartment/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+#10 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-23 19:25:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'toilets' in 'field list'
+[Method: POST, Route: properties/store]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:25:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'toilets' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:25:38 --> [Caused by] mysqli_sql_exception: Unknown column 'toilets' in 'field list'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 19:27:56 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE) in /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /opt/lampp/htdocs/ServiceApartment/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/ServiceApartment/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/ServiceApartment/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+#10 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-23 19:27:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+[Method: POST, Route: properties/store]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:27:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:27:56 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `properties_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `agents` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 19:42:35 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `FK_properties_members` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`) ON DELETE CASCADE) in /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /opt/lampp/htdocs/ServiceApartment/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/ServiceApartment/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/ServiceApartment/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+#10 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-23 19:42:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `FK_properties_members` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`) ON DELETE CASCADE)
+[Method: POST, Route: properties/store]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:42:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `FK_properties_members` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:42:35 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`serviceapartment`.`properties`, CONSTRAINT `FK_properties_members` FOREIGN KEY (`user_id`) REFERENCES `members` (`id`) ON DELETE CASCADE)
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (\'New Dream\', \'Create A New\', \'1\', \'3\', \'23213\', \'3\', \'3\', \'3\', \'324\', \'rented\', \'admin807\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`) VALUES (:title:, :description:, :category_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin/PropertyController.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-23 19:43:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "properties/index.php"
+[Method: GET, Route: properties]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('properties/index.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('properties/index', [], true)
+ 3 APPPATH/Controllers/Admin/PropertyController.php(34): view('properties/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:43:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "properties/index.php"
+[Method: GET, Route: properties]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('properties/index.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('properties/index', [], true)
+ 3 APPPATH/Controllers/Admin/PropertyController.php(34): view('properties/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 19:43:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "properties/index.php"
+[Method: GET, Route: properties]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('properties/index.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('properties/index', [], true)
+ 3 APPPATH/Controllers/Admin/PropertyController.php(34): view('properties/index', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:45:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-23 19:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 19:53:23 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:53:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 19:54:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 19:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-23 19:54:22 --> ErrorException: Undefined variable $propfeatureModel
+[Method: POST, Route: properties/store]
+in APPPATH/Controllers/Admin/PropertyController.php on line 123.
+ 1 APPPATH/Controllers/Admin/PropertyController.php(123): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propfeatureModel', '/opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php', 123)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-23 20:07:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:07:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 29.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:14:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:18:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:18:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:18:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:22:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:22:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:22:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:23:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:23:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:24:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:24:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:25:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:26:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:26:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:28:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:28:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:29:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:30:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:30:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:34:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:36:01 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:36:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:36:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:36:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:37:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:37:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 20:38:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 20:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 23:58:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 23:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-23 23:59:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-23 23:59:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-23 23:59:33 --> mysqli_sql_exception: Column 'username' cannot be null in /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php:308
+Stack trace:
+#0 /opt/lampp/htdocs/ServiceApartment/system/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `pr...', 0)
+#1 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /opt/lampp/htdocs/ServiceApartment/system/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /opt/lampp/htdocs/ServiceApartment/system/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 /opt/lampp/htdocs/ServiceApartment/system/BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 /opt/lampp/htdocs/ServiceApartment/system/Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 /opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php(222): CodeIgniter\Model->insert(Array)
+#8 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+#9 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+#10 /opt/lampp/htdocs/ServiceApartment/system/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 /opt/lampp/htdocs/ServiceApartment/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 /opt/lampp/htdocs/ServiceApartment/public/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-23 23:59:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+[Method: POST, Route: properties/store]
+in SYSTEMPATH/Database/BaseConnection.php on line 676.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (:title:, :description:, :category_id:, :user_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:, :thumbnail:)', [...], false)
+ 2 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(222): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 23:59:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'username' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 313.
+ 1 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (\'freee\', \'freeeeeeeeeeee\', \'1\', \'2\', \'2\', \'2\', \'2\', \'2\', \'3\', \'3\', \'available\', NULL, \'uploads/thumbnails/1740355173_c81b6ef40424bc90c7bb.jpg\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (\'freee\', \'freeeeeeeeeeee\', \'1\', \'2\', \'2\', \'2\', \'2\', \'2\', \'3\', \'3\', \'available\', NULL, \'uploads/thumbnails/1740355173_c81b6ef40424bc90c7bb.jpg\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (:title:, :description:, :category_id:, :user_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:, :thumbnail:)', [...], false)
+ 4 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH/Controllers/Admin/PropertyController.php(222): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+ 9 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+10 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-23 23:59:33 --> [Caused by] mysqli_sql_exception: Column 'username' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 308.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(308): mysqli->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (\'freee\', \'freeeeeeeeeeee\', \'1\', \'2\', \'2\', \'2\', \'2\', \'2\', \'3\', \'3\', \'available\', NULL, \'uploads/thumbnails/1740355173_c81b6ef40424bc90c7bb.jpg\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (\'freee\', \'freeeeeeeeeeee\', \'1\', \'2\', \'2\', \'2\', \'2\', \'2\', \'3\', \'3\', \'available\', NULL, \'uploads/thumbnails/1740355173_c81b6ef40424bc90c7bb.jpg\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (\'freee\', \'freeeeeeeeeeee\', \'1\', \'2\', \'2\', \'2\', \'2\', \'2\', \'3\', \'3\', \'available\', NULL, \'uploads/thumbnails/1740355173_c81b6ef40424bc90c7bb.jpg\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `properties` (`title`, `description`, `category_id`, `user_id`, `location_id`, `price`, `bedrooms`, `bathrooms`, `toilets`, `area`, `status`, `username`, `thumbnail`) VALUES (:title:, :description:, :category_id:, :user_id:, :location_id:, :price:, :bedrooms:, :bathrooms:, :toilets:, :area:, :status:, :username:, :thumbnail:)', [...], false)
+ 5 SYSTEMPATH/Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH/Controllers/Admin/PropertyController.php(222): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->store()
+10 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+11 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

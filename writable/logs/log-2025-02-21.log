@@ -1,0 +1,95 @@
+INFO - 2025-02-21 13:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 13:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 13:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-21 13:59:35 --> ErrorException: Undefined variable $type
+[Method: GET, Route: apartment-view]
+in APPPATH/Controllers/ApartmentDetailsController.php on line 26.
+ 1 APPPATH/Controllers/ApartmentDetailsController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $type', '/opt/lampp/htdocs/ServiceApartment/app/Controllers/ApartmentDetailsController.php', 26)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\ApartmentDetailsController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApartmentDetailsController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-21 14:40:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 14:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:56:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 15:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 16:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 16:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 16:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 16:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-21 16:25:45 --> ErrorException: Undefined variable $apartmentModel
+[Method: GET, Route: apartment-view]
+in APPPATH/Controllers/Apartment.php on line 37.
+ 1 APPPATH/Controllers/Apartment.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apartmentModel', '/opt/lampp/htdocs/ServiceApartment/app/Controllers/Apartment.php', 37)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->view()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 16:26:11 --> ErrorException: Undefined variable $apartmentModel
+[Method: GET, Route: apartment-view]
+in APPPATH/Controllers/Apartment.php on line 37.
+ 1 APPPATH/Controllers/Apartment.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apartmentModel', '/opt/lampp/htdocs/ServiceApartment/app/Controllers/Apartment.php', 37)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->view()
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-21 16:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-21 16:45:57 --> ErrorException: Undefined array key "location"
+[Method: GET, Route: apartment]
+in APPPATH/Views/pre/houses.php on line 81.
+ 1 APPPATH/Views/pre/houses.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "location"', '/opt/lampp/htdocs/ServiceApartment/app/Views/pre/houses.php', 81)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/pre/houses.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('pre/houses', [], true)
+ 5 APPPATH/Views/apartment.php(24): view('pre/houses')
+ 6 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/apartment.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment', [], true)
+ 9 APPPATH/Controllers/Apartment.php(30): view('apartment', [...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->index()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-21 16:59:56 --> ErrorException: Undefined array key "location"
+[Method: GET, Route: apartment]
+in APPPATH/Views/pre/houses.php on line 81.
+ 1 APPPATH/Views/pre/houses.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "location"', '/opt/lampp/htdocs/ServiceApartment/app/Views/pre/houses.php', 81)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/pre/houses.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('pre/houses', [], true)
+ 5 APPPATH/Views/apartment.php(24): view('pre/houses')
+ 6 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/apartment.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment', [], true)
+ 9 APPPATH/Controllers/Apartment.php(30): view('apartment', [...])
+10 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->index()
+11 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+12 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-21 17:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

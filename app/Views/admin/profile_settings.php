@@ -327,30 +327,6 @@
                     </div>
                     <!--end::Basic info-->
 
-                    <!--end::Content-->
-                    <!--begin::Sign-in Method-->
-                    <div class="card mb-5 mb-xl-10">
-                        <!--begin::Card header-->
-                        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
-                            data-bs-target="#kt_account_signin_method">
-                            <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Agent Identification</h3>
-
-                            </div>
-
-                        </div>
-                        <!--end::Card header-->
-
-                    </div>
-                    <!--end::Sign-in Method-->
-
-                    <div class="d-flex justify-content-start">
-                        <!--begin::Button-->
-                        <a href="<?= base_url() ?>profile/student/details" id="kt_ecommerce_add_product_cancel"
-                            class="btn btn-primary me-5">Back to profile</a>
-                        <!--end::Button-->
-
-                    </div>
                     <!--end::Sign-in Method-->
                 </div>
                 <!--end::Content container-->

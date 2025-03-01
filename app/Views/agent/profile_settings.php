@@ -98,7 +98,7 @@
                                                     <!--begin::Inputs-->
                                                     <input type="file" name="file" accept=".png, .jpg, .jpeg"
                                                         placeholder="<?= base_url() . 'uploads/agent/image/' . $AdminData['photo'] ?>"
-                                                        style="display: none;" <input type="hidden"
+                                                        style="display: none;" type="hidden"
                                                         name="avatar_remove" />
                                                     <!--end::Inputs-->
                                                 </label>
@@ -329,53 +329,41 @@
                                     <!--begin::Label-->
                                     <br>
                                     <br>
-                                    <div id="kt_signin_email">
+                                    <div style="padding:10px" id="kt_signin_email">
                                         <div class="fs-6 fw-bold mb-1">Agent Valid ID</div>
                                         <div class="fw-semibold text-gray-600">Add A Valid National ID</div>
                                     </div>
                                     <!--end::Label-->
                                     <!--begin::Edit-->
-                                    <div id="kt_signin_email_eit" class="flex-row-fluid d-none">
+                                    <div id="kt_signin_email_eit" class="flex-row-fluid ">
                                         <!--begin::Form-->
-                                        <form id="kt_signin_change_email" enctype="multipart/form-data"
-                                            action="<?= base_url() . 'profile/student/submit/id/' . $AdminData['id'] ?>"
+                                        <form id="" enctype="multipart/form-data"
+                                            action="<?= base_url() . 'agent/submit/id/' . $AdminData['id'] ?>"
                                             id="" method="post" class="form" novalidate="novalidate">
-                                            <div class="form-group mb-4">
-                                                <label class="form-label fs-6 fw-semibold">Attachments</label>
-                                                <div class="dropzone">
+                                           <div class="d-flex justify-content-between" >
+                                           <div class="form-group mb-4">
+                                                <div style="padding:10px" class="">
                                                     <div class="dz-message  align-items-center">
                                                         <i class="icon ki-file-upload fs-3 text-primary"></i>
                                                         <input type="file" name="files">
-                                                        <div class="ms-3">
-                                                            <h3 class="fs-5 fw-bold text-gray-900 mb-1">Upload your
-                                                                Valid Issued ID Card.</h3>
-                                                            <span class="fw-semibold fs-7 text-gray-500">Upload
-                                                                File</span>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="d-flex">
                                                 <button id="kt_signin_submit" type="submit"
                                                     class="btn btn-primary me-2 px-6">Submit ID</button>
-                                                <button id="kt_signin_cancel" type="button"
-                                                    class="btn btn-color-gray-500 btn-active-light-primary px-6">Cancel</button>
+                                                
                                             </div>
+                                           </div>
                                         </form>
                                         <!--end::Form-->
                                     </div>
                                     <!--end::Edit-->
                                     <!--begin::Action-->
-                                    <?php if (isset($AdminData['govt_id']) && $AdminData['govt_id']) : ?>
-                                    <div class="ms-auto">
-                                        <button class="btn btn-danger btn-active-light-primary">Disabled</button>
-                                    </div>
+                                    
 
-                                    <?php else : ?>
-                                    <div id="kt_signin_email_button" class="ms-auto">
-                                        <button class="btn btn-light btn-active-light-primary">Add ID</button>
-                                    </div>
-                                    <?php endif; ?>
+                                    
                                     <!--end::Action-->
                                 </div>
                                 <!--end::Email Address-->

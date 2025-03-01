@@ -3,30 +3,27 @@
 namespace App\Controllers;
 
 use App\Models\ApartmentModel;
+use App\Models\PropertyModel;
+use App\Models\PropertyImageModel;
+use App\Models\PropertyFeatureModel;
 
 class Home extends BaseController
 {
     public function index()
     {
-        $apartmentModel = new ApartmentModel();
-        $type = $this->request->getGet('type');
-
-        if ($type) {
-            // Fetch apartments filtered by type
-            $apartment = $apartmentModel->where('type', $type)->findAll();
-        } else {
-            // Fetch all apartments if no type filter is applied
-            $apartment = $apartmentModel->findAll();
-        }
-
+        $apartmentModel = new PropertyModel();
+        $apartment = $apartmentModel->getPropertiesWithDetails();
         $page = new \stdClass();
         $page->title = 'Home';
 
         $data = [
             'page' => $page,
             'apartment' => $apartment,
-            'type' => $type,
+            // 'type' => $type,
         ];
+        // echo '<pre>';
+        // print_r($data);
+        // die;
 
         $data['activeMenuItem'] = 'home';
 
@@ -35,4 +32,4 @@ class Home extends BaseController
 
     
 }
-?>
+

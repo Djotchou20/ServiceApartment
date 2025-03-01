@@ -81,12 +81,12 @@ a {
     <br>
     <div>
       <!-- Login Button -->
-      <a href="<?php echo base_url()?>login" class="btn btn-primary py-3 px-4 me-3 animated fadeIn">Agent Login</a>
-      <a href="<?php echo base_url()?>login" class="btn btn-primary py-3 px-4 me-3 animated fadeIn">Guest Login</a>
+      <!-- <a href="<?php echo base_url()?>login" class="btn btn-primary py-3 px-4 me-3 animated fadeIn">Agent Login</a> -->
+      <a href="<?php echo base_url()?>login" class="btn btn-primary py-4 px-4 me-3 animated fadeIn">Guest Login</a>
     </div>
     <br>
     <div>
-      <small>Don't have an account? <a href="<?php echo base_url()?>register-as-agent" style="color: blue;">Agent Signup</a> or <a href="<?php echo base_url()?>user-signup" style="color: blue;">Guest Signup</a>.</small>
+      <small>Don't have an account?  <a href="<?php echo base_url()?>user-signup" style="color: blue;">Guest Signup</a>.</small>
     </div>
     <br>
     <div>
@@ -103,10 +103,7 @@ a {
       Choose how you want to sign up. Are you an agent looking to list properties or a guest looking to book shortlets?
     </div>
     <br>
-    <div class="d-flex">
-      <!-- Button for Agents -->
-      <a href="<?php echo base_url()?>register-as-agent" class="btn btn-primary py-3 px-3 me-3 animated fadeIn">Register as Agent</a>
-<br>
+  
 <br>
       <!-- Button for Guests -->
       <a href="<?php echo base_url()?>user-signup" class="btn btn-secondary py-3 px-3 animated fadeIn">Register as Guest</a>

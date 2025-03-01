@@ -93,7 +93,7 @@
                     <!--begin::Body-->
                     <div class="py-20">
                         <!--begin::Form-->
-                        <form class="form w-100" action="<?= base_url('login') ?>" method="post">
+                        <form class="form w-100" action="<?= base_url('agent-auth') ?>" method="POST">
                             <div class="text-start mb-10">
                                 <h1 class="text-gray-900 mb-3 fs-3x" data-kt-translate="sign-up-title">Sign in as member
                                 </h1>

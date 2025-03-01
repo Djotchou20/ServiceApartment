@@ -45,14 +45,19 @@
                     </div>
                     <!--end::Page title-->
                     <!--begin::Actions-->
-                    <div id="marqueeContainer" style="width:70%; text-align:center;">
-                        <marquee behavior="scroll" scrollamount="4" direction="ltr" style="color:red; font-size:16px;">
-                            Please make your payment, so you can start posting properties</marquee>
-                    </div>
+                    <?php if (isset($AgentData['paid']) && $AgentData['paid'] !== 'PAID'): ?>
+    <div id="marqueeContainer" style="width:70%; text-align:center;">
+        <marquee behavior="scroll" scrollamount="4" direction="ltr" style="color:red; font-size:16px;">
+            Please make your payment, so you can start posting properties
+        </marquee>
+    </div>
+<?php endif; ?>
 
                     <div class="d-flex align-items-center gap-2 gap-lg-3">
+                    <?php if (isset($AgentData['paid']) && $AgentData['paid'] !== 'PAID'): ?>
                         <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal"
                             data-bs-target="#kt_modal_create_app">Pay Now!</a>
+                            <?php endif; ?>
                         <!-- Modal -->
                         <!-- <div class="modal fade" id="paystackModal" tabindex="-1" aria-labelledby="paystackModalLabel" aria-hidden="true"> -->
                         <div class="modal fade" id="kt_modal_create_app" tabindex="-1"
@@ -176,55 +181,7 @@
 
                                         </div>
 
-                                        <!-- <div class="d-flex my-4">
-														<a href="#" class="btn btn-sm btn-light me-2" id="kt_user_follow_button">
-															<i class="ki-duotone ki-check fs-3 d-none"></i>
-															
-															<span class="indicator-label">Follow</span>
-															
-															<span class="indicator-progress">Please wait...
-																<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-															
-														</a>
-														<a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_offer_a_deal">Hire Me</a>
-														
-														<div class="me-0">
-															<button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-																<i class="ki-solid ki-dots-horizontal fs-2x"></i>
-															</button>
-															
-															<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-																
-																<div class="menu-item px-3">
-																	<div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Payments</div>
-																</div>
-																
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Create Invoice</a>
-																</div>
-																
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link flex-stack px-3">Create Payment
-																		<span class="ms-2" data-bs-toggle="tooltip" title="Specify a target name for future usage and reference">
-																			<i class="ki-duotone ki-information fs-6">
-																				<span class="path1"></span>
-																				<span class="path2"></span>
-																				<span class="path3"></span>
-																			</i>
-																		</span></a>
-																</div>
-																
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Generate Bill</a>
-																</div>
-																
-																
-															</div>
-															
-														</div>
-														
-													</div> -->
-                                        <!--end::Actions-->
+                                        
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Stats-->
@@ -233,62 +190,38 @@
                                         <div class="d-flex flex-column flex-grow-1 pe-8">
                                             <!--begin::Stats-->
                                             <div class="d-flex flex-wrap">
-                                                <!--begin::Stat-->
+                                                <!-- Agents Count -->
                                                 <div
                                                     class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                    <!--begin::Number-->
                                                     <div class="d-flex align-items-center">
-                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2">
-                                                            <span class="path1"></span>
-                                                            <span class="path2"></span>
-                                                        </i>
+                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"></i>
                                                         <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                            data-kt-countup-value="4500" data-kt-countup-prefix="$">0
-                                                        </div>
+                                                            data-kt-countup-value="<?= $bookings; ?>">0</div>
                                                     </div>
-                                                    <!--end::Number-->
-                                                    <!--begin::Label-->
-                                                    <div class="fw-semibold fs-6 text-gray-500">Earnings</div>
-                                                    <!--end::Label-->
+                                                    <div class="fw-semibold fs-6 text-gray-500">Your Apartment Bookings</div>
                                                 </div>
-                                                <!--end::Stat-->
-                                                <!--begin::Stat-->
+
+                                                <!-- Users Count -->
                                                 <div
                                                     class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                    <!--begin::Number-->
                                                     <div class="d-flex align-items-center">
-                                                        <i class="ki-duotone ki-arrow-down fs-3 text-danger me-2">
-                                                            <span class="path1"></span>
-                                                            <span class="path2"></span>
-                                                        </i>
+                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"></i>
                                                         <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                            data-kt-countup-value="80">0</div>
+                                                            data-kt-countup-value="<?= $Agentprop; ?>">0</div>
                                                     </div>
-                                                    <!--end::Number-->
-                                                    <!--begin::Label-->
-                                                    <div class="fw-semibold fs-6 text-gray-500">Projects</div>
-                                                    <!--end::Label-->
+                                                    <div class="fw-semibold fs-6 text-gray-500">Properties</div>
                                                 </div>
-                                                <!--end::Stat-->
-                                                <!--begin::Stat-->
+
+                                                <!-- Properties Count -->
                                                 <div
                                                     class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                    <!--begin::Number-->
                                                     <div class="d-flex align-items-center">
-                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2">
-                                                            <span class="path1"></span>
-                                                            <span class="path2"></span>
-                                                        </i>
-                                                        <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                            data-kt-countup-value="60" data-kt-countup-prefix="%">0
-                                                        </div>
+                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"></i>
+                                                        <div class="fs-2 fw-bold" 
+                                                            ><?= isset($AgentData['paid']) ? $AgentData['paid'] : "" ?></div>
                                                     </div>
-                                                    <!--end::Number-->
-                                                    <!--begin::Label-->
-                                                    <div class="fw-semibold fs-6 text-gray-500">Success Rate</div>
-                                                    <!--end::Label-->
+                                                    <div class="fw-semibold fs-6 text-gray-500">Payment Status</div>
                                                 </div>
-                                                <!--end::Stat-->
                                             </div>
                                             <!--end::Stats-->
                                         </div>
@@ -312,44 +245,8 @@
                                 <!--end::Info-->
                             </div>
                             <!--end::Details-->
-                            <!--begin::Navs-->
-                            <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Overview</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5" href="#">Projects</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 active"
-                                        href="pages/user-profile/campaigns.html">Campaigns</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/documents.html">Documents</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/followers.html">Followers</a>
-                                </li>
-                                <!--end::Nav item-->
-                                <!--begin::Nav item-->
-                                <li class="nav-item mt-2">
-                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
-                                        href="pages/user-profile/activity.html">Activity</a>
-                                </li>
-                                <!--end::Nav item-->
-                            </ul>
-                            <!--begin::Navs-->
+                        <br>
+                        <br>
                         </div>
                     </div>
                     <!--end::Navbar-->
@@ -365,7 +262,7 @@
                                     </div>
                                     <!--end::Card title-->
                                     <!--begin::Action-->
-                                    <a href="<?= base_url() . 'user/settings' ?>"
+                                    <a href="<?= base_url() . 'agent/settings' ?>"
                                         class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
                                     <!--end::Action-->
                                 </div>
@@ -490,18 +387,7 @@
                                         <!--end::Col-->
                                     </div>
                                     <!--end::Input group-->
-                                    <!--begin::Input group-->
-                                    <div class="row mb-7">
-                                        <!--begin::Label-->
-                                        <label class="col-lg-4 fw-semibold text-muted">Agnent ID</label>
-                                        <!--end::Label-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-8">
-                                            <span
-                                                class="fw-bold fs-6 text-gray-800"><?= isset($AgentData['agent_id']) ? $AgentData['agent_id'] : "" ?></span>
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
+                                   
 
 
                                     <!--end::Notice-->

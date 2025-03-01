@@ -12,7 +12,7 @@ class Profile extends BaseController
     {
         $page = new \stdClass();
         $page->title = 'Dashboard';
-
+        $db = \Config\Database::connect();
         // Start the session and check if it's valid
         $session = session();
 
@@ -25,19 +25,16 @@ class Profile extends BaseController
         // Fetch user data by ID
         // $user = $membersModel->find($userId);
 
-        // $lastActivity = $session->get('last_activity');
-
-        // if ($userId === null || $lastActivity === null || $lastActivity < time() - 7200) {
-        //     // Destroy the session
-        //     $session->destroy();
-
-        //     // Redirect to the login page
-        //     return redirect()->to('/login');
-        // }
+        $agents = $db->table('agents')->countAllResults();
+        $users = $db->table('users')->countAllResults();
+        $properties = $db->table('properties')->countAllResults();
 
         // Prepare data for the view
         $data = [
             'AdminData' => $adminData,
+            'agents_count' => $agents, 
+            'users_count' => $users,
+            'properties_count' => $properties,
             'activeMenuItem' => 'profile',
             // 'user' => $user,
         ];

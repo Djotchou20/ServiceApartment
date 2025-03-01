@@ -25,6 +25,9 @@ class AgentModel extends Model
         'govt_id',
         'phone',
         'status',
+        'changed_by',
+        'change_time',
+
         'role',
         'paid'
     ];

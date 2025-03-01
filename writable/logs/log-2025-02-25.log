@@ -1,0 +1,555 @@
+WARNING - 2025-02-25 04:26:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 04:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-25 04:26:18 --> ErrorException: Undefined variable $user_role
+[Method: GET, Route: admin/properties/edit/35]
+in APPPATH/Views/agent/leftsidebar.php on line 70.
+ 1 APPPATH/Views/agent/leftsidebar.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_role', '/opt/lampp/htdocs/ServiceApartment/app/Views/agent/leftsidebar.php', 70)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/agent/leftsidebar.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('agent/leftsidebar', [], true)
+ 5 APPPATH/Views/agent/user_default.php(71): view('agent/leftsidebar')
+ 6 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/agent/user_default.php')
+ 7 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH/View/View.php(250): CodeIgniter\View\View->render('agent/user_default', [], true)
+ 9 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+10 APPPATH/Controllers/Admin/PropertyController.php(227): view('admin/property_edit', [...])
+11 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('35')
+12 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+13 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 04:27:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 04:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:27:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 04:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 04:32:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 04:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 06:13:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 06:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:14:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-25 06:16:49 --> ErrorException: Undefined variable $user_role
+[Method: GET, Route: admin/profiledash]
+in APPPATH/Views/admin/profiledash.php on line 48.
+ 1 APPPATH/Views/admin/profiledash.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user_role', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/profiledash.php', 48)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/profiledash.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/profiledash', [], true)
+ 5 APPPATH/Controllers/Admin/Profile.php(50): view('admin/profiledash', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\Profile->index()
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profile))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 06:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 06:20:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 06:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 06:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 06:22:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 06:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:30:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:32:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:34:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:34:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:34:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:34:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:34:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:36:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:41:03 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 15:41:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 15:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 15:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-25 15:53:48 --> ParseError: syntax error, unexpected single-quoted string "", expecting ")"
+[Method: GET, Route: view/apartment/fully-furnished-2-bed-room-apartment-with-air-condition]
+in APPPATH/Views/apartment_details.php on line 179.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment_details', [], true)
+ 3 APPPATH/Controllers/Apartment.php(54): view('apartment_details', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->ApartmentView('fully-furnished-2-bed-room-apartment-with-air-condition')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 15:54:09 --> ParseError: syntax error, unexpected double-quoted string "", expecting ")"
+[Method: GET, Route: view/apartment/fully-furnished-2-bed-room-apartment-with-air-condition]
+in APPPATH/Views/apartment_details.php on line 179.
+ 1 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment_details', [], true)
+ 3 APPPATH/Controllers/Apartment.php(54): view('apartment_details', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->ApartmentView('fully-furnished-2-bed-room-apartment-with-air-condition')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 15:55:57 --> ErrorException: Undefined variable $apartments
+[Method: GET, Route: view/apartment/fully-furnished-2-bed-room-apartment-with-air-condition]
+in APPPATH/Views/apartment_details.php on line 91.
+ 1 APPPATH/Views/apartment_details.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apartments', '/opt/lampp/htdocs/ServiceApartment/app/Views/apartment_details.php', 91)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/apartment_details.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment_details', [], true)
+ 5 APPPATH/Controllers/Apartment.php(54): view('apartment_details', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->ApartmentView('fully-furnished-2-bed-room-apartment-with-air-condition')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 15:56:11 --> ErrorException: Undefined variable $apartments
+[Method: GET, Route: view/apartment/fully-furnished-2-bed-room-apartment-with-air-condition]
+in APPPATH/Views/apartment_details.php on line 179.
+ 1 APPPATH/Views/apartment_details.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $apartments', '/opt/lampp/htdocs/ServiceApartment/app/Views/apartment_details.php', 179)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/apartment_details.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('apartment_details', [], true)
+ 5 APPPATH/Controllers/Apartment.php(54): view('apartment_details', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Apartment->ApartmentView('fully-furnished-2-bed-room-apartment-with-air-condition')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Apartment))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 16:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 16:52:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 16:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 16:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 16:53:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 16:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 16:53:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 16:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 16:57:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 16:57:39 --> ErrorException: Undefined variable $propertyFeatures
+[Method: GET, Route: admin/properties/edit/35]
+in APPPATH/Views/admin/property_edit.php on line 156.
+ 1 APPPATH/Views/admin/property_edit.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyFeatures', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(227): view('admin/property_edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('35')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 16:59:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 16:59:15 --> BadMethodCallException: Call to undefined method App\Models\PropertyModel::getPropertyFeatures
+[Method: GET, Route: admin/properties/edit/35]
+in SYSTEMPATH/Model.php on line 921.
+ 1 APPPATH/Controllers/Admin/PropertyController.php(165): CodeIgniter\Model->__call('getPropertyFeatures', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('35')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 16:59:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 16:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 16:59:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 16:59:49 --> ErrorException: Undefined variable $propertyFeatures
+[Method: GET, Route: admin/properties/edit/32]
+in APPPATH/Views/admin/property_edit.php on line 156.
+ 1 APPPATH/Views/admin/property_edit.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyFeatures', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(153): view('admin/property_edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:02:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 17:02:39 --> BadMethodCallException: Call to undefined method App\Models\PropertyModel::getPropertyFeatures
+[Method: GET, Route: admin/properties/edit/32]
+in SYSTEMPATH/Model.php on line 921.
+ 1 APPPATH/Controllers/Admin/PropertyController.php(166): CodeIgniter\Model->__call('getPropertyFeatures', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:03:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 17:03:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "properties/edit.php"
+[Method: GET, Route: admin/properties/edit/32]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 41.
+ 1 SYSTEMPATH/View/View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('properties/edit.php')
+ 2 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('properties/edit', [], true)
+ 3 APPPATH/Controllers/Admin/PropertyController.php(168): view('properties/edit', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 5 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 6 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:03:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 17:03:52 --> ErrorException: Undefined variable $propertyFeatures
+[Method: GET, Route: admin/properties/edit/32]
+in APPPATH/Views/admin/property_edit.php on line 156.
+ 1 APPPATH/Views/admin/property_edit.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyFeatures', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(168): view('admin/property_edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:05:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 17:05:47 --> ErrorException: Undefined variable $propertyFeatures
+[Method: GET, Route: admin/properties/edit/32]
+in APPPATH/Views/admin/property_edit.php on line 156.
+ 1 APPPATH/Views/admin/property_edit.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyFeatures', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(169): view('admin/property_edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:05:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 17:05:53 --> ErrorException: Undefined variable $propertyFeatures
+[Method: GET, Route: admin/properties/edit/32]
+in APPPATH/Views/admin/property_edit.php on line 156.
+ 1 APPPATH/Views/admin/property_edit.php(156): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyFeatures', '/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php', 156)
+ 2 SYSTEMPATH/View/View.php(234): include('/opt/lampp/htdocs/ServiceApartment/app/Views/admin/property_edit.php')
+ 3 SYSTEMPATH/View/View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1171): CodeIgniter\View\View->render('admin/property_edit', [], true)
+ 5 APPPATH/Controllers/Admin/PropertyController.php(169): view('admin/property_edit', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 7 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 8 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 17:06:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 17:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 17:15:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 17:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 19:35:08 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 19:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 19:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 19:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 19:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 19:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 19:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 19:51:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 19:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 19:51:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-25 19:51:48 --> ErrorException: Undefined variable $propertyId
+[Method: GET, Route: admin/properties/edit/32]
+in APPPATH/Controllers/Admin/PropertyController.php on line 168.
+ 1 APPPATH/Controllers/Admin/PropertyController.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $propertyId', '/opt/lampp/htdocs/ServiceApartment/app/Controllers/Admin/PropertyController.php', 168)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Admin\PropertyController->edit('32')
+ 3 SYSTEMPATH/CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\PropertyController))
+ 4 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-02-25 19:52:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 19:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 19:53:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 19:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 20:01:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 20:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 20:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-25 21:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 21:34:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 21:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 21:34:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 21:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-02-25 21:35:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin\PropertyController::$propfeatureModel is deprecated in APPPATH/Controllers/Admin/PropertyController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(903): App\Controllers\Admin\PropertyController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-25 21:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

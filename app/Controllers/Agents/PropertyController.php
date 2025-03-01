@@ -106,48 +106,7 @@ class PropertyController extends Controller
         return redirect()->to('/properties')->with('success', 'Property added successfully.');
     }
 
-    // public function store()
-    // {
-    //     // Validate form input
-    //     $validation = \Config\Services::validation();
-    //     $validation->setRules($this->propertyModel->validationRules);
-
-    //     if (!$validation->withRequest($this->request)->run()) {
-    //         return redirect()->back()->withInput()->with('errors', $validation->getErrors());
-    //     }
-
-    //     // Insert property
-    //     $session = session(); // Load session
-    //     $username = $session->get('username'); // Get username from session
-    //     $userId = $session->get('user_id'); // Get username from session
-
-    //     $propertyData = $this->request->getPost(); // Get post data
-    //     $propertyData['username'] = $username;
-    //     $propertyData['user_id'] = $userId;
-    //     echo "<pre>";
-    //     print_r($propertyData);
-    //     die;
-    //     $this->propertyModel->insert($propertyData);
-    //     $propertyId = $this->propertyModel->insertID();
-
-    //     // Handle image uploads
-    //     $files = $this->request->getFiles();
-    //     if (!empty($files['images'])) {
-    //         foreach ($files['images'] as $index => $image) {
-    //             if ($image->isValid() && !$image->hasMoved()) {
-    //                 $newName = $image->getRandomName();
-    //                 $image->move('uploads/properties', $newName);
-    //                 $this->imageModel->insert([
-    //                     'property_id' => $propertyId,
-    //                     'image_url' => 'uploads/properties/' . $newName,
-    //                     'is_main' => ($index == 0) ? 1 : 0
-    //                 ]);
-    //             }
-    //         }
-    //     }
-
-    //     return redirect()->to('/properties')->with('success', 'Property added successfully.');
-    // }
+   
 
     // Show edit form
     public function edit($id)
@@ -177,5 +136,36 @@ class PropertyController extends Controller
         $this->propertyModel->delete($id);
 
         return redirect()->to('/properties')->with('success', 'Property deleted successfully.');
+    }
+
+
+    public function toggleVisibility($id)
+    {
+        // Retrieve the property by its ID
+        $property = $this->propertyModel->find($id);
+        $username = session()->get('username');
+    
+        // Check if the property exists
+        if (!$property) {
+            return redirect()->back()->with('error', 'Property not found');
+        }
+    
+        // Toggle the visibility
+        $newStatus = ($property['visibility'] == 'visible') ? 'hidden' : 'visible';
+    
+        // Update the property record
+        $data = [
+            'visibility' => $newStatus,
+            'change_time' => date('Y-m-d H:i:s'),
+            'changed_by' => $username,
+        ];
+    
+        $updated = $this->propertyModel->update($property['id'], $data);
+    
+        if ($updated === false) {
+            return redirect()->back()->with('error', 'Failed to update property status');
+        }
+    
+        return redirect()->back()->with('success', 'Property status changed successfully');
     }
 }

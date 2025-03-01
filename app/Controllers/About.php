@@ -1,24 +1,14 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ApartmentModel;
+use App\Models\PropertyModel;
 
 class About extends BaseController
 {
     public function index()
     {
-        $apartmentModel = new ApartmentModel();
-        $type = $this->request->getGet('type');
-
-        // $apartment = $apartmentModel->findAll();
-
-        if ($type) {
-            // Fetch apartments filtered by type
-            $apartment = $apartmentModel->where('type', $type)->findAll();
-        } else {
-            // Fetch all apartments if no type filter is applied
-            $apartment = $apartmentModel->findAll();
-        }
+        $apartmentModel = new PropertyModel();
+        $apartment = $apartmentModel->getPropertiesWithDetails();
 
         $page = new \stdClass();
         $page->title = 'About';
@@ -26,7 +16,7 @@ class About extends BaseController
         $data = [
             'page' => $page,
             'apartment' => $apartment,
-            'type' => $type,
+            // 'type' => $type,
         ];
 
         // $activeMenuItem = 'about'; // Set active menu item // for the controller

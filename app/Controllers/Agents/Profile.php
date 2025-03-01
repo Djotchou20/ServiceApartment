@@ -13,45 +13,38 @@ class Profile extends BaseController
     {
         $page = new \stdClass();
         $page->title = 'Dashboard';
+        $db = \Config\Database::connect();
 
         // Start the session and check if it's valid
         $session = session();
-
-        // Check if the session is expired
-        // $userId = $session->get('user_id');
-
-        // // Update the last activity time
-        // $session->set('last_activity', time());
-
-        // // Use the user ID from the route if provided, otherwise get it from the session
-        // $userId = $id ?? $session->get('user_id'); // Ensure this matches the session key
+        // $agents = $db->table('agents')->countAllResults();
+        
 
         // Load the AgentModel
         $AgentModel = new AgentModel();
         $username = session()->get('username');
+        $user_id = session()->get('user_id');
+
         // $studentId = session()->get('student_id');
         // Fetch student details
         $agentData = $AgentModel->where('username', $username)->first();
         // Fetch user data by ID
         // $user = $AgentModel->find($userId);
-
-        // $lastActivity = $session->get('last_activity');
-
-        // if ($userId === null || $lastActivity === null || $lastActivity < time() - 7200) {
-        //     // Destroy the session
-        //     $session->destroy();
-
-        //     // Redirect to the login page
-        //     return redirect()->to('/login');
-        // }
+        $bookings = $db->table('bookings')->where('user_id',  $user_id)->countAllResults();
+        $properties = $db->table('properties')->where('user_id',  $user_id)->countAllResults();
 
         // Prepare data for the view
         $data = [
             'AgentData' => $agentData,
+            'Agentprop' => $properties,
+            'bookings' => $bookings,
+
             'activeMenuItem' => 'profile',
-            // 'user' => $user,
         ];
 
+        //    echo "<pre>";
+        // print_r($data);
+        // die;
         return view('agent/profiledash', $data);
     }
 
@@ -149,6 +142,9 @@ class Profile extends BaseController
 
         // Handle File Upload if a file is uploaded
         $file = $this->request->getFile('files');
+        //      echo "<pre>";
+        // print_r($file);
+        // die;
         $filePath = ''; // Initialize file path variable
         $newFileName = ''; // Initialize newFileName
 
@@ -185,9 +181,9 @@ class Profile extends BaseController
         $data = [
             'govt_id' => $newFileName,
         ];
-        echo "<pre>";
-        print_r($data);
-        die;
+        // echo "<pre>";
+        // print_r($data);
+        // die;
         // Update the database with the new file name
         $update_result = $Model->update($id, $data);
 

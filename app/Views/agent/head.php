@@ -140,24 +140,21 @@
                                     <img alt="Logo" src="<?= base_url() ?>assetss/media/avatars/300-3.jpg" />
                                 </div>
                                 <!--end::Avatar-->
+                                <?php $username = session()->get('username'); ?>
+                                <?php $email = session()->get('email'); ?>
                                 <!--begin::Username-->
                                 <div class="d-flex flex-column">
-                                    <div class="fw-bold d-flex align-items-center fs-5">Robert Fox
+                                    <div class="fw-bold d-flex align-items-center fs-5"><?= $username?>
                                         <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
                                     </div>
-                                    <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">robert@kt.com</a>
+                                    <a href="#" class="fw-semibold text-muted text-hover-primary fs-7"><?= $email?></a>
                                 </div>
                                 <!--end::Username-->
                             </div>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu separator-->
-                        <div class="separator my-2"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Menu item-->
-                        <div class="menu-item px-5">
-                            <a href="account/overview.html" class="menu-link px-5">My Profile</a>
-                        </div>
+                      
 
 
                         <div class="separator my-2"></div>

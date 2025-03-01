@@ -79,13 +79,14 @@ class Login extends BaseController
                         $session = session();
                         $session->set([
                             'user_id' => $user['id'],
+                            'user_role' => $user['role'],
                             'email' => $user['email'],
                             'username' => $user['username'],
-                            'logged_in' => TRUE,
+                            'logged_in' => true,
                         ]);
 
                         // Redirect to the dashboard or another page
-                        return redirect()->to('/admin/profiledash')->with('success', 'Login successful.<br><br>Kindly make payment to access more features we provide.');
+                        return redirect()->to('/admin/profiledash')->with('success', 'Login successful.');
                     } else {
                         return redirect()->back()->withInput()->with('error', 'Inactive account');
                     }

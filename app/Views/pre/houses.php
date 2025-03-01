@@ -36,12 +36,12 @@
                         <li class="nav-item me-2">
                             <button class="btn btn-outline-primary active" data-type="featured">Featured</button>
                         </li>
-                        <li class="nav-item me-2">
+                        <!-- <li class="nav-item me-2">
                             <button class="btn btn-outline-primary" data-type="rent">For Rent</button>
                         </li>
                         <li class="nav-item me-0">
                             <button class="btn btn-outline-primary" data-type="lease">For Lease</button>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -54,8 +54,8 @@
                                 <div class="col-lg-4 col-md-6 property-item-wrapper" data-type="<?= strtolower($apartments['type']) ?>">
                                     <div class="property-item rounded overflow-hidden">
                                         <div class="position-relative overflow-hidden">
-                                            <?php if (!empty($apartments['image'])) : ?>
-                                                <a href=""><img class="img-fluid" src="<?= base_url('assets/img/' . $apartments['image']) ?>" alt="invalid image"></a>
+                                            <?php if (!empty($apartments['thumbnail'])) : ?>
+                                                <a href="<?= base_url() ?>view/apartment/<?= $apartments['prop_url']?> "><img class="img-fluid" src="<?= base_url() ?><?= $apartments['thumbnail']?> " alt="invalid image"></a>
                                             <?php else : ?>
                                                 <p>No image available</p>
                                             <?php endif; ?>
@@ -74,8 +74,8 @@
                                             <?php if (!empty($apartments['price'])) : ?>
                                                 <h5 class="text-primary mb-3">&#8358;<?= number_format($apartments['price'], 2, '.', ',') ?></h5>
                                             <?php endif; ?>
-                                            <?php if (!empty($apartments['description'])) : ?>
-                                                <a class="d-block h5 mb-2" href=""><?= $apartments['description'] ?></a>
+                                            <?php if (!empty($apartments['title'])) : ?>
+                                                <a class="d-block h5 mb-2" href="<?= base_url() ?>view/apartment/<?= $apartments['prop_url']?> "><?= $apartments['title'] ?></a>
                                             <?php endif; ?>
                                             <?php if (!empty($apartments['location'])) : ?>
                                                 <p><i class="fa fa-map-marker-alt text-primary me-2"></i><?= $apartments['location'] ?></p>
