@@ -9,6 +9,16 @@ use App\Models\UsersModel;
 
 class BookingsController extends BaseController
 {
+    // List all properties
+    public function index()
+    {
+          // Retrieve property details
+          $BookingModel = new BookingModel();
+        $userId = session()->get('user_id');
+        $data['bookings'] = $BookingModel->where('user_id', $userId)->findAll();
+        return view('users/bookings_view', $data);
+    }
+
     public function create()
     {
         // Validate the form data
@@ -134,10 +144,9 @@ public function paymentSuccess()
     $page = new \stdClass();
     $page->title = 'Success View';
    
-
     // Pass booking and user details to the view
     $data = [
-       
+    
         'page' => $page,
     ];
 

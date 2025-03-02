@@ -60,6 +60,10 @@ $routes->get('admin/agents-list', 'Admin\AgentController::index');
 $routes->get('admin/properties/agent-status/(:num)', 'Admin\AgentController::StatusVisibility/$1');
 $routes->get('admin/properties/pay-status/(:num)', 'Admin\AgentController::PaymentStatus/$1');
 
+
+$routes->get('admin/bookings-list', 'Admin\UserController::bookinglist');
+$routes->get('admin/confirm-payment/(:num)', 'Admin\UserController::PaymentVerified/$1');
+
 $routes->get('admin/user-status/(:num)', 'Admin\UserController::StatusVisibility/$1');
 $routes->get('payment-history', 'Admin\AgentController::payhistory');
 
@@ -73,11 +77,7 @@ $routes->post('admin/agent-settings-update/(:num)', 'Admin\AgentController::agen
 // }payhistory
 // );
 
-//payment
-$routes->get('payment', 'PaymentController::index');
-$routes->get('payment/verify', 'PaymentController::verifyPayment');
-// $routes->get('payment/success', 'PaymentController::paymentSuccess');
-$routes->get('payment/failed', 'PaymentController::paymentFailed');
+
 
 //agent login
 $routes->get('agent-login', 'Agents\Login::agents');
@@ -104,6 +104,7 @@ $routes->post('process-payment', 'Agents\Profile::index');
 $routes->get('bookings/checkout/(:num)', 'Users\BookingsController::success/$1'); 
 $routes->post('user/bookings/create', 'Users\BookingsController::create'); // Handle booking creation
 $routes->get('payment/success', 'Users\BookingsController::paymentSuccess'); 
+$routes->get('user/booking-history', 'Users\BookingsController::index');
 
 
 $routes->get('user-login', 'Users\Login::users');

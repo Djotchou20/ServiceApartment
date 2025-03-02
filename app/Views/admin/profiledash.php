@@ -223,6 +223,17 @@
                                                     </div>
                                                     <div class="fw-semibold fs-6 text-gray-500">Properties Posted</div>
                                                 </div>
+
+                                                <!-- Properties Count -->
+                                                <div
+                                                    class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"></i>
+                                                        <div class="fs-2 fw-bold" data-kt-countup="true"
+                                                            data-kt-countup-value="<?= $bookings; ?>">0</div>
+                                                    </div>
+                                                    <div class="fw-semibold fs-6 text-gray-500">Apartments Booked</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

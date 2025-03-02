@@ -28,12 +28,14 @@ class Profile extends BaseController
         $agents = $db->table('agents')->countAllResults();
         $users = $db->table('users')->countAllResults();
         $properties = $db->table('properties')->countAllResults();
+        $bookings = $db->table('bookings')->countAllResults();
 
         // Prepare data for the view
         $data = [
             'AdminData' => $adminData,
             'agents_count' => $agents, 
             'users_count' => $users,
+            'bookings' => $bookings,
             'properties_count' => $properties,
             'activeMenuItem' => 'profile',
             // 'user' => $user,

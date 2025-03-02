@@ -49,7 +49,7 @@
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
                     <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-                    <?php $user_role = session()->get('user_role'); ?>
+                        <?php $user_role = session()->get('user_role'); ?>
                         <!--begin:Menu link-->
                         <span class="menu-link">
                             <span class="menu-icon">
@@ -67,8 +67,8 @@
                         <div class="menu-sub menu-sub-accordion">
                             <!--begin:Menu item-->
 
-                            
-                        <?php if ($user_role == 'admin'): ?>
+
+                            <?php if ($user_role == 'admin'): ?>
                             <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>/admin/profiledash">
@@ -115,9 +115,19 @@
                                 </a>
                                 <!--end:Menu link-->
                             </div>
-
- <!--begin:Menu item-->
- <div class="menu-item">
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
+                                <!--begin:Menu link-->
+                                <a class="menu-link" href="<?= base_url() ?>admin/bookings-list/">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Booking List</span>
+                                </a>
+                                <!--end:Menu link-->
+                            </div>
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>admin/register-agent/">
                                     <span class="menu-bullet">
@@ -128,8 +138,8 @@
                                 <!--end:Menu link-->
                             </div>
 
-                             <!--begin:Menu item-->
-                             <div class="menu-item">
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>admin/agents-list/">
                                     <span class="menu-bullet">
@@ -140,8 +150,8 @@
                                 <!--end:Menu link-->
                             </div>
 
-                              <!--begin:Menu item-->
-                              <div class="menu-item">
+                            <!--begin:Menu item-->
+                            <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>admin/users-list/">
                                     <span class="menu-bullet">
@@ -162,12 +172,12 @@
                                 </a>
                                 <!--end:Menu link-->
                             </div>
-                        <?php elseif ($user_role == 'agent'): ?>
-                             <!--end:Menu item-->
-                                   <!-- Agent Side Bar -->
-                             <!--begin:Menu item-->
+                            <?php elseif ($user_role == 'agent'): ?>
+                            <!--end:Menu item-->
+                            <!-- Agent Side Bar -->
+                            <!--begin:Menu item-->
 
-                             <div class="menu-item">
+                            <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>/agent/profiledash">
                                     <span class="menu-bullet">
@@ -216,8 +226,8 @@
                             </div>
                             <!--end:Menu item-->
                             <!-- End Agent Sidebar -->
-                        <?php elseif ($user_role == 'user'): ?>
-                           
+                            <?php elseif ($user_role == 'user'): ?>
+
                             <div class="menu-item">
                                 <!--begin:Menu link-->
                                 <a class="menu-link" href="<?= base_url() ?>user/profile/">
@@ -240,8 +250,7 @@
                             </div>
                             <div class="menu-item">
                                 <!--begin:Menu link-->
-                                <a class="menu-link" href="#">
-                                <!-- <a class="menu-link" href="<?= base_url() ?>user/bookings/"> -->
+                                <a class="menu-link" href="<?= base_url() ?>user/booking-history/">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -249,9 +258,9 @@
                                 </a>
                                 <!--end:Menu link-->
                             </div>
-                        <?php endif; ?>
-                            
-                          
+                            <?php endif; ?>
+
+
 
                         </div>
                         <!--end:Menu sub-->

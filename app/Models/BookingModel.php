@@ -23,6 +23,8 @@ class BookingModel extends Model
         'prop_url',
         'agent_id',
         'username',
+        'changed_by',
+        'change_time',
         'thumbnail',
         'title',
         'total_price',
