@@ -76,7 +76,7 @@ $routes->post('admin/agent-settings-update/(:num)', 'Admin\AgentController::agen
 //payment
 $routes->get('payment', 'PaymentController::index');
 $routes->get('payment/verify', 'PaymentController::verifyPayment');
-$routes->get('payment/success', 'PaymentController::paymentSuccess');
+// $routes->get('payment/success', 'PaymentController::paymentSuccess');
 $routes->get('payment/failed', 'PaymentController::paymentFailed');
 
 //agent login
@@ -100,9 +100,12 @@ $routes->post('process-payment', 'Agents\Profile::index');
 
 
 //main users auths & loggs
-$routes->get('bookings/form/(:num)', 'Users/BookingsController::form/$1'); // Booking form for a specific property
-$routes->post('user/bookings/create', 'Users/BookingsController::create'); // Handle booking creation
-$routes->get('bookings/success', 'Users/BookingsController::success'); 
+// $routes->get('bookings/form/(:num)', 'Users\BookingsController::form/$1'); // Booking form for a specific property
+$routes->get('bookings/checkout/(:num)', 'Users\BookingsController::success/$1'); 
+$routes->post('user/bookings/create', 'Users\BookingsController::create'); // Handle booking creation
+$routes->get('payment/success', 'Users\BookingsController::paymentSuccess'); 
+
+
 $routes->get('user-login', 'Users\Login::users');
 $routes->post('login', 'Users\Login::userlogin');
 $routes->get('logout', 'Users\Login::userLogout');

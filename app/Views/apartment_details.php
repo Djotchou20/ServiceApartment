@@ -178,8 +178,8 @@ $images = explode(',', $apartment['images']); // Convert images string into an a
                         <h3 class="listing-desc-headline">Facilities</h3>
                         <ul class="listing-features checkboxes">
                             <?php 
-$features = explode(',', $apartment['features']); // Convert comma-separated features into an array 
-?>
+                            $features = explode(',', $apartment['features']); // Convert comma-separated features into an array 
+                            ?>
                             <ul class="property-features">
                                 <?php foreach ($features as $feature): ?>
                                 <?php if (!empty($feature)): ?>
@@ -213,8 +213,8 @@ $features = explode(',', $apartment['features']); // Convert comma-separated fea
                         <h3 class="listing-desc-headline margin-top-60 margin-bottom-30">Location</h3>
 
                         <div id="singleListingMap-container">
-                            <div id="singleListingMap" data-latitude="40.70437865245596"
-                                data-longitude="-73.98674011230469" data-map-icon="im im-icon-Hamburger"></div>
+                            <div id=""> <?= $apartment['locationmap'] ?>
+                            </div>
                             <a href="#" id="streetView">Street View</a>
                         </div>
                     </div>
@@ -229,33 +229,37 @@ $features = explode(',', $apartment['features']); // Convert comma-separated fea
 		================================================== -->
                 <div class="col-lg-4 col-md-4 margin-top-75 sticky">
 
-
+                   
                     <!-- Verified Badge -->
                     <div class="verified-badge with-tip"
                         data-tip-content="Listing has been verified and belongs the business owner or manager.">
                         <i class="sl sl-icon-check"></i> Verified Listing
                     </div>
                     <!-- Book Now -->
-                    <form action="<?= base_url() ?>user/bookings/create" method="POST">
+                    <form action="<?= base_url() ?>user/bookings/create" method="post">
                         <div id="booking-widget-anchor" class="boxed-widget booking-widget margin-top-35">
-                            <h3><i class="fa fa-calendar-check-o "></i> Booking at
+                            <h3>
+                                <i class="fa fa-calendar-check-o"></i> Booking at
                                 <strong>&#8358;<?= number_format($apartment['price'], 2, '.', ',') ?>/ daily</strong>
                             </h3>
-                            <div class="row with-forms  margin-top-0">
+                            <div class="row with-forms margin-top-0">
                                 <input type="hidden" name="property_id" value="<?= $apartment['id'] ?>">
                                 <input type="hidden" name="price" value="<?= $apartment['price'] ?>">
-                                <!-- Date Range Picker - docs: http://www.daterangepicker.com/ -->
-                                <div lass="col-lg-12">
+                                <input type="hidden" name="user_id" value="<?= $apartment['user_id'] ?>">
+
+
+                                <!-- Date Range Picker -->
+                                <div class="col-lg-12">
                                     <label for="check_in">Check-In Date:</label>
                                     <input type="date" name="check_in" id="check_in" required>
                                 </div>
 
-                                <div lass="col-lg-12">
+                                <div class="col-lg-12">
                                     <label for="check_out">Check-Out Date:</label>
                                     <input type="date" name="check_out" id="check_out" required>
                                 </div>
 
-                                <div lass="col-lg-12">
+                                <div class="col-lg-12 panel-dropdown">
                                     <label for="payment_method">Payment Method:</label>
                                     <select name="payment_method" id="payment_method" required>
                                         <option value="card">Card</option>
@@ -264,103 +268,95 @@ $features = explode(',', $apartment['features']); // Convert comma-separated fea
                                     </select>
                                 </div>
 
-
                                 <div class="booking-estimated-cost" id="total_price"
                                     style="font-weight: bold; margin: 10px 0;">
                                     <strong>Total Cost</strong>
                                     <span>0.00</span>
-
                                 </div>
-                                <!-- Panel Dropdown -->
-                                <div class="col-lg-12">
+
+                                <!-- Guests Dropdown -->
+                                <!-- <div class="col-lg-12">
                                     <div class="panel-dropdown">
                                         <a href="#">Guests <span class="qtyTotal" name="qtyTotal">1</span></a>
                                         <div class="panel-dropdown-content">
-
-                                            <!-- Quantity Buttons -->
+                                            Quantity Buttons
                                             <div class="qtyButtons">
                                                 <div class="qtyTitle">Adults</div>
-                                                <input type="text" name="qtyInput" value="1">
+                                                <input type="text" name="adults" value="1">
                                             </div>
-
                                             <div class="qtyButtons">
-                                                <div class="qtyTitle">Childrens</div>
-                                                <input type="text" name="qtyInput" value="0">
+                                                <div class="qtyTitle">Children</div>
+                                                <input type="text" name="children" value="0">
                                             </div>
-
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
-                            <!-- Book Now -->
-                            <a href="pages-booking.html" class="button book-now fullwidth margin-top-5">Request To
-                                Book</a>
-
-                            <!-- Estimated Cost -->
-
+                            <!-- Submit Button -->
+                            <button type="submit" class="button book-now fullwidth margin-top-5">Request To
+                                Book</button>
                         </div>
-                        <!-- Book Now / End -->
-                        </form>
-                        <!-- Contact -->
-                        <div class="boxed-widget margin-top-35">
-                            <div class="hosted-by-title">
-                                <h4><span>Hosted by</span> <a
-                                        href="pages-user-profile.html"><?=  $settingsData['company_name']?></a></h4>
-                                <a href="pages-user-profile.html" class="hosted-by-avatar"><img
-                                        src="<?= base_url() ?>uploads/settings/image/<?=  $settingsData['photo']?>"
-                                        alt=" Service Apartment Logo"></a>
-                            </div>
-                            <ul class="listing-details-sidebar">
-                                <li><i class="sl sl-icon-phone"></i> <?=  $settingsData['phone']?></li>
-                                <!-- <li><i class="sl sl-icon-globe"></i> <a href="#">http://example.com</a></li> -->
-                                <li><i class="fa fa-envelope-o"></i> <a href="#"><?=  $settingsData['email']?></a></li>
-                            </ul>
-
-                            <ul class="listing-details-sidebar social-profiles">
-                                <li><a href="<?=  $settingsData['facebook']?>" class="facebook-profile"><i
-                                            class="fa fa-facebook-square"></i> Facebook</a></li>
-                                <li><a href="<?=  $settingsData['twitter']?>" class="twitter-profile"><i
-                                            class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="<?=  $settingsData['instagram']?>" class="gplus-profile"><i
-                                            class="fa fa-instagram"></i> Instagram</a></li>
-                                <!-- <li><a href="#" class="gplus-profile"><i class="fa fa-google-plus"></i> Google Plus</a></li> -->
-                            </ul>
-
-                            <!-- Reply to review popup -->
-                            <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                                <div class="small-dialog-header">
-                                    <h3>Send Message</h3>
-                                </div>
-                                <div class="message-reply margin-top-0">
-                                    <textarea cols="40" rows="3" placeholder="Your message to Tom"></textarea>
-                                    <button class="button">Send Message</button>
-                                </div>
-                            </div>
-
-                            <a href="#small-dialog" class="send-message-to-owner button popup-with-zoom-anim"><i
-                                    class="sl sl-icon-envelope-open"></i> Send Message</a>
+                    </form>
+                    <!-- Contact -->
+                    <div class="boxed-widget margin-top-35">
+                        <div class="hosted-by-title">
+                            <h4><span>Hosted by</span> <a
+                                    href="pages-user-profile.html"><?=  $settingsData['company_name']?></a></h4>
+                            <a href="pages-user-profile.html" class="hosted-by-avatar"><img
+                                    src="<?= base_url() ?>uploads/settings/image/<?=  $settingsData['photo']?>"
+                                    alt=" Service Apartment Logo"></a>
                         </div>
-                        <!-- Contact / End-->
+                        <ul class="listing-details-sidebar">
+                            <li><i class="sl sl-icon-phone"></i> <?=  $settingsData['phone']?></li>
+                            <!-- <li><i class="sl sl-icon-globe"></i> <a href="#">http://example.com</a></li> -->
+                            <li><i class="fa fa-envelope-o"></i> <a href="#"><?=  $settingsData['email']?></a></li>
+                        </ul>
+
+                        <ul class="listing-details-sidebar social-profiles">
+                            <li><a href="<?=  $settingsData['facebook']?>" class="facebook-profile"><i
+                                        class="fa fa-facebook-square"></i> Facebook</a></li>
+                            <li><a href="<?=  $settingsData['twitter']?>" class="twitter-profile"><i
+                                        class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="<?=  $settingsData['instagram']?>" class="gplus-profile"><i
+                                        class="fa fa-instagram"></i> Instagram</a></li>
+                            <!-- <li><a href="#" class="gplus-profile"><i class="fa fa-google-plus"></i> Google Plus</a></li> -->
+                        </ul>
+
+                        <!-- Reply to review popup -->
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                            <div class="small-dialog-header">
+                                <h3>Send Message</h3>
+                            </div>
+                            <div class="message-reply margin-top-0">
+                                <textarea cols="40" rows="3" placeholder="Your message to Tom"></textarea>
+                                <button class="button">Send Message</button>
+                            </div>
+                        </div>
+
+                        <a href="#small-dialog" class="send-message-to-owner button popup-with-zoom-anim"><i
+                                class="sl sl-icon-envelope-open"></i> Send Message</a>
+                    </div>
+                    <!-- Contact / End-->
 
 
-                        <!-- Share / Like -->
-                        <div class="listing-share margin-top-40 margin-bottom-40 no-border">
-                            <!-- <button class="like-button"><span class="like-icon"></span> Bookmark this listing</button> 
+                    <!-- Share / Like -->
+                    <div class="listing-share margin-top-40 margin-bottom-40 no-border">
+                        <!-- <button class="like-button"><span class="like-icon"></span> Bookmark this listing</button> 
 				<span>159 people bookmarked this place</span> -->
 
-                            <!-- Share Buttons -->
-                            <ul class="share-buttons margin-top-40 margin-bottom-0">
-                                <li><a class="fb-share"
-                                        href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(current_url()) ?>"
-                                        target="_blank"><i class="fa fa-facebook"></i> Share</a></li>
-                                <li><a class="twitter-share"
-                                        href="https://twitter.com/intent/tweet?url=<?= urlencode(current_url()) ?>&text=Check+out+this+amazing+content!"
-                                        target="_blank"><i class="fa fa-twitter"></i> Tweet</a></li>
-                                <li><a class="gplus-share" href="#"><i class="fa fa-google-plus"></i> Share</a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                        </div>
+                        <!-- Share Buttons -->
+                        <ul class="share-buttons margin-top-40 margin-bottom-0">
+                            <li><a class="fb-share"
+                                    href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(current_url()) ?>"
+                                    target="_blank"><i class="fa fa-facebook"></i> Share</a></li>
+                            <li><a class="twitter-share"
+                                    href="https://twitter.com/intent/tweet?url=<?= urlencode(current_url()) ?>&text=Check+out+this+amazing+content!"
+                                    target="_blank"><i class="fa fa-twitter"></i> Tweet</a></li>
+                            <li><a class="gplus-share" href="#"><i class="fa fa-google-plus"></i> Share</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
 
                 </div>
                 <!-- Sidebar / End -->

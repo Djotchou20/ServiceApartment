@@ -5,6 +5,7 @@ namespace App\Controllers\Agents;
 
 use App\Models\BookingModel;
 use CodeIgniter\Controller;
+use App\Controllers\BaseController;
 
 class BookingController extends Controller
 {

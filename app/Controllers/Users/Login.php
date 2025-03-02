@@ -80,10 +80,11 @@ class Login extends BaseController
                         $sess = [
                             'user_id' => $user['id'],
                             'email' => $user['email'],
+                            'name' => $user['name'],
                             'username' => $user['username'],
                             'user_role' => $user['role'],
                             'logged_in' => TRUE,
-                        ];
+                        ]; 
                         // echo "<pre>";
                         // print_r($sess);
                         // die;

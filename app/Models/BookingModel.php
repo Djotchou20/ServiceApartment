@@ -18,10 +18,13 @@ class BookingModel extends Model
         'property_id',
         'user_id',
         'check_in',
+        'check_out',
+        'name',
+        'prop_url',
+        'agent_id',
         'username',
         'thumbnail',
         'title',
-        'check_out',
         'total_price',
         'price',
         'status',
@@ -35,17 +38,7 @@ class BookingModel extends Model
     // Date format for timestamps
     protected $dateFormat = 'datetime';
 
-    // Cast fields to appropriate types
-    // protected $casts = [
-    //     'check_in' => 'date',
-    //     'check_out' => 'date',
-    //     'total_price' => 'float',
-    //     'price' => 'float',
-    //     'status' => 'string',
-    //     'payment_status' => 'string',
-    //     'payment_method' => 'string',
-    // ];
-
+    
     // Relationships
     public function property()
     {

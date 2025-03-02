@@ -38,7 +38,7 @@ class Profile extends BaseController
             'activeMenuItem' => 'profile',
             // 'user' => $user,
         ];
-
+        
 
         // echo "<pre>";
         // print_r($data);

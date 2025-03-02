@@ -46,18 +46,18 @@
                     <!--end::Page title-->
                     <!--begin::Actions-->
                     <?php if (isset($AgentData['paid']) && $AgentData['paid'] !== 'PAID'): ?>
-    <div id="marqueeContainer" style="width:70%; text-align:center;">
-        <marquee behavior="scroll" scrollamount="4" direction="ltr" style="color:red; font-size:16px;">
-            Please make your payment, so you can start posting properties
-        </marquee>
-    </div>
-<?php endif; ?>
+                    <div id="marqueeContainer" style="width:70%; text-align:center;">
+                        <marquee behavior="scroll" scrollamount="4" direction="ltr" style="color:red; font-size:16px;">
+                            Please make your payment, so you can start posting properties
+                        </marquee>
+                    </div>
+                    <?php endif; ?>
 
                     <div class="d-flex align-items-center gap-2 gap-lg-3">
-                    <?php if (isset($AgentData['paid']) && $AgentData['paid'] !== 'PAID'): ?>
+                        <?php if (isset($AgentData['paid']) && $AgentData['paid'] !== 'PAID'): ?>
                         <a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal"
                             data-bs-target="#kt_modal_create_app">Pay Now!</a>
-                            <?php endif; ?>
+                        <?php endif; ?>
                         <!-- Modal -->
                         <!-- <div class="modal fade" id="paystackModal" tabindex="-1" aria-labelledby="paystackModalLabel" aria-hidden="true"> -->
                         <div class="modal fade" id="kt_modal_create_app" tabindex="-1"
@@ -181,7 +181,7 @@
 
                                         </div>
 
-                                        
+
                                     </div>
                                     <!--end::Title-->
                                     <!--begin::Stats-->
@@ -198,7 +198,8 @@
                                                         <div class="fs-2 fw-bold" data-kt-countup="true"
                                                             data-kt-countup-value="<?= $bookings; ?>">0</div>
                                                     </div>
-                                                    <div class="fw-semibold fs-6 text-gray-500">Your Apartment Bookings</div>
+                                                    <div class="fw-semibold fs-6 text-gray-500">Your Apartment Bookings
+                                                    </div>
                                                 </div>
 
                                                 <!-- Users Count -->
@@ -217,8 +218,9 @@
                                                     class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
                                                     <div class="d-flex align-items-center">
                                                         <i class="ki-duotone ki-arrow-up fs-3 text-success me-2"></i>
-                                                        <div class="fs-2 fw-bold" 
-                                                            ><?= isset($AgentData['paid']) ? $AgentData['paid'] : "" ?></div>
+                                                        <div class="fs-2 fw-bold">
+                                                            <?= isset($AgentData['paid']) ? $AgentData['paid'] : "" ?>
+                                                        </div>
                                                     </div>
                                                     <div class="fw-semibold fs-6 text-gray-500">Payment Status</div>
                                                 </div>
@@ -245,8 +247,8 @@
                                 <!--end::Info-->
                             </div>
                             <!--end::Details-->
-                        <br>
-                        <br>
+                            <br>
+                            <br>
                         </div>
                     </div>
                     <!--end::Navbar-->
@@ -387,7 +389,7 @@
                                         <!--end::Col-->
                                     </div>
                                     <!--end::Input group-->
-                                   
+
 
 
                                     <!--end::Notice-->
